@@ -1,0 +1,17 @@
+/* themes.css */
+
+/* Tema claro */
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #03dac6;
+  --background-color: #bb86fc;
+  --text-color: #000000;
+}
+
+/* Tema oscuro */
+.dark-theme {
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --background-color: #121212;
+  --text-color: #ffffff;
+}

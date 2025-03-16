@@ -1,0 +1,13 @@
+/* styles.css */
+
+/* *TIPOGRAFIA */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --font-family-base: 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-size-small: 12px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
