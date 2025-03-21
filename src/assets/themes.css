@@ -4,8 +4,9 @@
 :root {
   --primary-color: #6200ea;
   --secondary-color: #03dac6;
-  --background-color: #bb86fc;
+  --background-color: #ffffff;
   --text-color: #000000;
+  --text-color-button-primary: #ffffff;
 }
 
 /* Tema oscuro */
@@ -14,4 +15,5 @@
   --secondary-color: #03dac6;
   --background-color: #121212;
   --text-color: #ffffff;
+  --text-color-button-primary: #121212;
 }

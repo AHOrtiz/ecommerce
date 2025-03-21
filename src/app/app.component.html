@@ -1,12 +1,14 @@
 <body>
   <shared-navbar></shared-navbar>
   <shared-btn-circle
-      [color_background]="'var(--background-color)'"
-      [color_icon]="'var(--primary-color)'"
-      [icon]="'fa-solid fa-cart-shopping'"
-      (onclick)="btnCarrito($event)">
+    [color_background]="'var(--background-color)'"
+    [color_icon]="'var(--primary-color)'"
+    [icon]="'fa-solid fa-cart-shopping'"
+    (onclick)="btnCarrito($event)">
   </shared-btn-circle>
+
   <shared-btn-descuentos
-  [color_background]="'var(--background-color)'"
-  [label]="80"></shared-btn-descuentos>
+    [color_background]="'var(--primary-color)'"
+    [label]="80">
+  </shared-btn-descuentos>
 </body>

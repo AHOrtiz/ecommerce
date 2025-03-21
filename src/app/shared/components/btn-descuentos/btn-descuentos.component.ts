@@ -13,9 +13,11 @@ export class BtnDescuentosComponent {
   }
 
   @ViewChild('container', { static: true }) containerElement?: ElementRef<HTMLDivElement>;
+  @ViewChild('text', { static: true }) textElement?: ElementRef<HTMLLabelElement>;
 
   ngOnInit(): void {
     this.containerElement!.nativeElement.style.backgroundColor = `${this.color_background}`;
+    this.textElement!.nativeElement.style.color = `var(--text-color-button-primary)`;
   }
 
   get label(): number {
