@@ -1,6 +1,6 @@
 /* app.component.css */
 body {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   color: var(--text-color);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
