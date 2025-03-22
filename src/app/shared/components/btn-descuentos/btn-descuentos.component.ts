@@ -17,7 +17,7 @@ export class BtnDescuentosComponent {
 
   ngOnInit(): void {
     this.containerElement!.nativeElement.style.backgroundColor = `${this.color_background}`;
-    this.textElement!.nativeElement.style.color = `var(--text-color-button-primary)`;
+    this.textElement!.nativeElement.style.color = `var(--text-color-button)`;
   }
 
   get label(): number {

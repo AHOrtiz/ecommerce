@@ -1,9 +1,14 @@
-.main-container{
+:host {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
 }
-

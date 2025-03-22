@@ -16,15 +16,11 @@ export class BtnCircleComponent implements OnInit {
   @ViewChild('container',{static:true}) containerElement?: ElementRef<HTMLDivElement>;
 
   ngOnInit(): void {
-    console.log('OnInit circle',this.containerElement);
     this.containerElement!.nativeElement.style.backgroundColor= `${this.color_background}`;
     this.containerElement!.nativeElement.style.color = `${this.color_icon}`;
-
  }
 
   btnClick(){
     this.onclick.emit(true);
   }
-
-
 }

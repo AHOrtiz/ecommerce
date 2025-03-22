@@ -1,15 +1,17 @@
-.header {
-  background-color: #1f2937;
-  color: white;
-  padding: 15px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+:host {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary-color);
+  color: var(--text-color-ligth);
+  display: block;
 }
 
-.container {
+header {
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 
 /* Logo */
@@ -18,38 +20,37 @@
   font-weight: bold;
 }
 
-.highlight {
-  color: #fbbf24;
+.logo span {
+  color: var(--secondary-color);
 }
 
 /* Navegación */
-.nav {
+nav {
   display: flex;
   gap: 20px;
 }
 
-.nav-link {
-  color: white;
+nav a {
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: #fbbf24;
+nav a:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
 }
+
+/* Iconos del menu */
 
 .menu-icons {
   display: flex;
   gap: 15px;
-}
-
-.icon {
-  color: white;
   font-size: 20px;
-  transition: color 0.3s;
 }
 
-.icon:hover {
-  color: #fbbf24;
+.menu-icons a:hover, i:hover {
+  color: var(--secondary-color);
+  transition: color 0.3s;
+  cursor: pointer;
 }

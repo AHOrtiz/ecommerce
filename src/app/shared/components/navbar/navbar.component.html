@@ -1,22 +1,17 @@
-<header class="header">
-  <div class="container">
+<header>
+  <div class="logo">
+    <span>F</span>urniFlex
+  </div>
 
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/catalog">Catalog</a>
+  </nav>
 
-    <div class="logo">
-      <span class="highlight">F</span>urniFlex
-    </div>
-
-
-    <nav class="nav">
-      <a routerLink="/" class="nav-link">Home</a>
-      <a routerLink="/catalog" class="nav-link">Catalog</a>
-    </nav>
-
-    <div class="menu-icons">
-      <a routerLink="/search" class="icon"><i class="fa-solid fa-user"></i></a>
-      <a routerLink="/wishlist" class="icon"><i class="fa-solid fa-cart-plus"></i></a>
-    </div>
-
+  <div class="menu-icons">
+    <a routerLink="/search"><i class="fa-solid fa-user"></i></a>
+    <a routerLink="/wishlist"><i class="fa-solid fa-cart-plus"></i></a>
+    <i (click)="toggleTheme()" class="fa-solid fa-moon"></i>
   </div>
 </header>
 
