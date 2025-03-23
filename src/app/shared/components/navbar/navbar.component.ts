@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'shared-navbar',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  @Output() onclick = new EventEmitter<boolean>();
+
+  public toggleTheme() {
+    this.onclick.emit(true);
+  }
 }

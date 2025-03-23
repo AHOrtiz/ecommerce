@@ -2,18 +2,20 @@
 
 /* Tema claro */
 :root {
-  --primary-color: #6200ea;
-  --secondary-color: #03dac6;
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --text-color-button-primary: #ffffff;
+  --primary-color: #131921;
+  --secondary-color: #febd69;
+  --background-color: #fff;
+  --text-color: #565959;
+  --text-color-ligth: #fff;
+  --text-color-button: #565959;
 }
 
 /* Tema oscuro */
 .dark-theme {
-  --primary-color: #bb86fc;
-  --secondary-color: #03dac6;
-  --background-color: #121212;
-  --text-color: #ffffff;
-  --text-color-button-primary: #121212;
+  --primary-color: #131921;
+  --secondary-color: #febd69;
+  --background-color: hsl(228, 5%, 15%);
+  --text-color: hsl(228, 5%, 80%);
+  --text-color-ligth: hsl(228, 5%, 80%);
+  --text-color-button: #565959;
 }
