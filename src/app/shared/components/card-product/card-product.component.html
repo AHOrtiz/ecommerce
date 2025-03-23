@@ -1,9 +1,23 @@
 <div class="card">
-  <img src="../../../../assets/imgs/sofa.jpg" alt="">
-  <br>
+  <div class="container-extraoptions">
+    <shared-btn-descuentos [color_background]="'var(--secondary-color)'" [label]="80">
+    </shared-btn-descuentos>
+    <i class="fa-solid fa-heart heart-icon"></i>
+  </div>
+
+  <img src="../../../../assets/imgs/sofa.png" alt="">
+
   <div class="card-body">
-      <label for="">Luxe Longe Sofa</label>
-      <br>
-      <label for="">$235.99</label>
+      <div class="card-text">
+        <label for="">Luxe Longe Sofa</label>
+        <label for="">$235.99</label>
+
+      </div>
+      <shared-btn-circle
+      [color_background]="'var(--secondary-color)'"
+      [color_icon]="'var(--text-color-button)'"
+      [icon]="'fa-solid fa-cart-shopping'"
+      (onclick)="btnCarrito($event)">
+    </shared-btn-circle>
   </div>
 </div>

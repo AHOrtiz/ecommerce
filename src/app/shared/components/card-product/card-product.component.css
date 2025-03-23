@@ -1,20 +1,77 @@
 .card{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 30%;
-  height: 55%;
-  margin:20px;
-  border-radius: 20px;
+  width: 300px;
+  border-radius: 15px;
+  position: relative;
+  background: var(--background-secondary-color);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-extraoptions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: static;
+  margin-top: 10px;
+
+}
+.container-extraoptions shared-btn-descuentos{
+  margin-left: 5px;
+
 }
 img{
-   border-top-left-radius: 20px;
-   border-top-right-radius: 20px;
-   width: 100%;
+  width: 70%;
+  display: block;
+
 }
 
 .card-body{
-    border-radius: 20px;
-    background-color: chocolate;
-    height: auto;
+  background-color:var(--primary-color);
+  color: var(--text-color-ligth);
+  text-align: left;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 
 }
+.card-body .card-text{
+  padding: 15px;
+}
+label{
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-card{
+  display: flex;
+  justify-content: space-between;
+}
+.heart-icon{
+
+  top: 12px;
+  left: 12px;
+  font-size: 18px;
+  color: white;
+  background: rgba(255, 0, 0, 0.8);
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-right: 5px;
+
+}
+
+shared-btn-circle{
+  margin-right: 5px;
+}
+
+
+
