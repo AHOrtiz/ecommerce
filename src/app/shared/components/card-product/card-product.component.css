@@ -30,7 +30,7 @@ img{
 }
 
 .card-body{
-  background-color:var(--primary-color);
+  background-color:var(--text-color-button);
   color: var(--text-color-ligth);
   text-align: left;
   width: 100%;
