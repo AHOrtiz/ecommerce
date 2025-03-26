@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'shared-card-product',
@@ -6,8 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-product.component.css']
 })
 export class CardProductComponent {
+  @Input() titulo: string = '';
+  @Input() precio: number = 0 ;
+
   btnCarrito(event:boolean){
     alert('Holaaaaaaa');
     console.log('entroo')
+  }
+  OnclickCard(){
+    console.log('ando funcionado padre')
   }
 }

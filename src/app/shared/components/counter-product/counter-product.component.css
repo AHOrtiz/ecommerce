@@ -1,5 +1,25 @@
-.container-main{
-  border-radius: 12px;
-  background-color: wheat;
-  border-color: black solid;
+:host {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.container-main {
+  border-radius: 22px;
+  background-color: var(--background-secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+i {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 50%;
 }

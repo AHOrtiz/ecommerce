@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" (click)="OnclickCard()">
   <div class="container-extraoptions">
     <shared-btn-descuentos [color_background]="'var(--secondary-color)'" [label]="80">
     </shared-btn-descuentos>
@@ -9,8 +9,8 @@
 
   <div class="card-body">
       <div class="card-text">
-        <label for="">Luxe Longe Sofa</label>
-        <label for="">$235.99</label>
+        <label for="">{{titulo}}</label>
+        <label for="">${{precio}}</label>
 
       </div>
       <shared-btn-circle

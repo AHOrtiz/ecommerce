@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'amazon';
   public currentTheme = 'light-theme';
+  public  nombreProduct = 'Luxe Lounge Sofa';
+  price =235.99
 
   btnCarrito(event:boolean){
     alert('Holaaaaaaa');
@@ -22,5 +24,9 @@ export class AppComponent {
       this.currentTheme = 'light-theme';
     }
     document.body.className = this.currentTheme;
+  }
+
+  public cuantity(cantity:number){
+      console.log(cantity)
   }
 }
