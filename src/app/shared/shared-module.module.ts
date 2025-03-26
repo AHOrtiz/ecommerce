@@ -7,6 +7,7 @@ import { CardProductComponent } from './components/card-product/card-product.com
 import { RaitingComponent } from './components/raiting/raiting.component';
 import { CounterProductComponent } from './components/counter-product/counter-product.component';
 import { CategoryComponent } from './components/category/category.component';
+import { AskAndAnswerComponent } from './components/ask-and-answer/ask-and-answer.component';
 
 
 
@@ -18,7 +19,8 @@ import { CategoryComponent } from './components/category/category.component';
     CardProductComponent,
     RaitingComponent,
     CounterProductComponent,
-    CategoryComponent
+    CategoryComponent,
+    AskAndAnswerComponent
   ],
   imports: [
     CommonModule
@@ -30,7 +32,8 @@ import { CategoryComponent } from './components/category/category.component';
     CardProductComponent,
     RaitingComponent,
     CounterProductComponent,
-    CategoryComponent
+    CategoryComponent,
+    AskAndAnswerComponent
   ]
 })
 export class SharedModuleModule { }
