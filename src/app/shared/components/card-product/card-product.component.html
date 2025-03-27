@@ -1,19 +1,21 @@
 <div class="card" (click)="OnclickCard()">
   <div class="container-extraoptions">
-    <shared-btn-descuentos [color_background]="'var(--secondary-color)'" [label]="80">
+    <shared-btn-descuentos
+      [color_background]="'var(--secondary-color)'"
+      [label]="80">
     </shared-btn-descuentos>
-    <i class="fa-solid fa-heart heart-icon"></i>
+    <i class="fa-regular fa-heart"></i>
   </div>
 
   <img src="../../../../assets/imgs/sofa.png" alt="">
 
   <div class="card-body">
-      <div class="card-text">
-        <label for="">{{titulo}}</label>
-        <label for="">${{precio}}</label>
+    <div class="card-text">
+      <label>{{titulo}}</label>
+      <label>${{precio}}</label>
+    </div>
 
-      </div>
-      <shared-btn-circle
+    <shared-btn-circle
       [color_background]="'var(--secondary-color)'"
       [color_icon]="'var(--text-color-button)'"
       [icon]="'fa-solid fa-cart-shopping'"

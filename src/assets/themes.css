@@ -9,6 +9,7 @@
   --text-color: #565959;
   --text-color-ligth: #fff;
   --text-color-button: #565959;
+  --text-color-red: #FF746C;
   --background-secondary-color: #f5f5f5;
 }
 
@@ -21,5 +22,6 @@
   --text-color: hsl(228, 5%, 80%);
   --text-color-ligth: hsl(228, 5%, 80%);
   --text-color-button: #565959;
+  --text-color-red: #FF746C;
   --background-secondary-color: #f5f5f5;
 }
