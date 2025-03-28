@@ -1,0 +1,3 @@
+<div #container  [title]="text" (click)="btnClick()" class="button-text">
+  {{ text.length > 10 ? (text.substring(0, 10) + '…') : text }}
+</div>

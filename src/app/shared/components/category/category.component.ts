@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-category',
+  selector: 'shared-category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })

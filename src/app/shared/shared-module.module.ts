@@ -8,6 +8,7 @@ import { RaitingComponent } from './components/raiting/raiting.component';
 import { CounterProductComponent } from './components/counter-product/counter-product.component';
 import { CategoryComponent } from './components/category/category.component';
 import { AskAndAnswerComponent } from './components/ask-and-answer/ask-and-answer.component';
+import { BtnActionComponent } from './components/btn-action/btn-action.component';
 
 
 
@@ -20,7 +21,8 @@ import { AskAndAnswerComponent } from './components/ask-and-answer/ask-and-answe
     RaitingComponent,
     CounterProductComponent,
     CategoryComponent,
-    AskAndAnswerComponent
+    AskAndAnswerComponent,
+    BtnActionComponent
   ],
   imports: [
     CommonModule
@@ -33,7 +35,8 @@ import { AskAndAnswerComponent } from './components/ask-and-answer/ask-and-answe
     RaitingComponent,
     CounterProductComponent,
     CategoryComponent,
-    AskAndAnswerComponent
+    AskAndAnswerComponent,
+    BtnActionComponent
   ]
 })
 export class SharedModuleModule { }

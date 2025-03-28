@@ -11,10 +11,15 @@ export class AppComponent {
   public currentTheme = 'light-theme';
   public  nombreProduct = 'Luxe Lounge Sofa';
   price =235.99
+  text:string='Buy Nowñopiy';
 
   btnCarrito(event:boolean){
     alert('Holaaaaaaa');
     console.log('entroo')
+  }
+  btnAction(event:boolean){
+    alert('Btn de accion');
+
   }
 
   public toggleTheme(event :boolean): void {
