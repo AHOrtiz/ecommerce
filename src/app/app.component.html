@@ -8,14 +8,9 @@
 
   <shared-btn-descuentos [color_background]="'var(--secondary-color)'" [label]="80">
   </shared-btn-descuentos>
-<<<<<<< Updated upstream
-  <shared-card-product></shared-card-product>
   <shared-ask-and-answer></shared-ask-and-answer>
-=======
   <shared-card-product [titulo]="nombreProduct" [precio]="price">
   </shared-card-product>
-  <shared-counter-product (cuantityEmmit)="cuantity($event)">
-
-  </shared-counter-product>
->>>>>>> Stashed changes
+  <shared-counter-product (cuantityEmmit)="cuantity($event)"></shared-counter-product>
+  <shared-app-raiting [stars]="3.5"></shared-app-raiting>
 </body>

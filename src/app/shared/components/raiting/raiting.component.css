@@ -1,0 +1,20 @@
+:host {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+}
+
+div span {
+  padding-left: 5px;
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+}
