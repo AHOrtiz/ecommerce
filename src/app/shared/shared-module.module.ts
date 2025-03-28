@@ -9,6 +9,8 @@ import { CounterProductComponent } from './components/counter-product/counter-pr
 import { CategoryComponent } from './components/category/category.component';
 import { AskAndAnswerComponent } from './components/ask-and-answer/ask-and-answer.component';
 import { BtnActionComponent } from './components/btn-action/btn-action.component';
+import { SecondCardComponent } from './components/second-card/second-card.component';
+import { TechnicalDetailsComponent } from './components/technical-details/technical-details.component';
 
 
 
@@ -22,7 +24,9 @@ import { BtnActionComponent } from './components/btn-action/btn-action.component
     CounterProductComponent,
     CategoryComponent,
     AskAndAnswerComponent,
-    BtnActionComponent
+    BtnActionComponent,
+    SecondCardComponent,
+    TechnicalDetailsComponent
   ],
   imports: [
     CommonModule
@@ -36,7 +40,9 @@ import { BtnActionComponent } from './components/btn-action/btn-action.component
     CounterProductComponent,
     CategoryComponent,
     AskAndAnswerComponent,
-    BtnActionComponent
+    BtnActionComponent,
+    SecondCardComponent,
+    TechnicalDetailsComponent
   ]
 })
 export class SharedModuleModule { }
