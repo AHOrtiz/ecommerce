@@ -12,6 +12,17 @@ export class AppComponent {
   public  nombreProduct = 'Luxe Lounge Sofa';
   price =235.99
   text:string='Buy Nowñopiy';
+  headers: [string,string]=['Features','Details'];
+  title_table='Tecnical Table';
+  rows: Array<[string,string]> = [
+    ['Brand','KOLLIEE'],
+    ['Color','Black'],
+    ['Product Dumensions','24"D x 24.4"W x 35.8"H'],
+    ['Size','Large'],
+    ['Back Style','Solid Back'],
+    ['Style','Modern'],
+    ['Unit Count','1.0 Count']
+  ];
 
   btnCarrito(event:boolean){
     alert('Holaaaaaaa');

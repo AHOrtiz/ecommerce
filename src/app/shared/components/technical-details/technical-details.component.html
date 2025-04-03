@@ -1,13 +1,19 @@
 <div class="main">
   <div class="title">
-      <h2>{{text}}</h2>
+      <h2>{{title}}</h2>
   </div>
-   <div class="table">
-      <div class="table-header">
-
-              <label for=""></label>
-              <label for=""></label>
-
-      </div>
-   </div>
+   <table>
+     <thead>
+        <tr>
+            <th>{{headers[0]}}</th>
+            <th>{{headers[1]}}</th>
+        </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let item of  rows">
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>
+       </tr>
+     </tbody>
+   </table>
 </div>
