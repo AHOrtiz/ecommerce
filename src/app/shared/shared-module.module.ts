@@ -1,3 +1,4 @@
+import { ToStringPipe } from './utils/pipes/toString.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BtnCircleComponent } from './components/btn-circle/btn-circle.component';
@@ -26,7 +27,10 @@ import { TechnicalDetailsComponent } from './components/technical-details/techni
     AskAndAnswerComponent,
     BtnActionComponent,
     SecondCardComponent,
-    TechnicalDetailsComponent
+    TechnicalDetailsComponent,
+
+    // Pipes
+    ToStringPipe
   ],
   imports: [
     CommonModule

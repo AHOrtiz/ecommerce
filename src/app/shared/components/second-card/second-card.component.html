@@ -1,25 +1,28 @@
 <div class="card" (click)="OnclickCard()">
-  <div class="container-extraoptions">
-    <shared-btn-descuentos
-      [color_background]="'var(--secondary-color)'"
-      [label]="80">
-    </shared-btn-descuentos>
-    <i class="fa fa-heart fas"></i>
+  <div class="header">
+    <div class="extra-options">
+      <shared-btn-descuentos
+        *ngIf="hasDiscount()"
+        [color_background]="'var(--secondary-color)'"
+        [label]="product.discount | toString">
+      </shared-btn-descuentos>
+      <i class="fa fa-heart fas"></i>
+    </div>
+
+    <img [src]="product.img" alt="">
   </div>
 
-  <img src="../../../../assets/imgs/sofa.png" alt="">
-
-  <div class="card-body">
+  <div class="footer">
     <div class="card-text">
-      <label>{{titulo}}</label>
-      <label>${{precio}}</label>
+      <label class="title">{{product.title}}</label>
+      <label class="price">${{getPrice()}}</label>
     </div>
 
     <shared-btn-circle
       [color_background]="'var(--secondary-color)'"
       [color_icon]="'var(--text-color-button)'"
       [icon]="'fa-solid fa-cart-shopping'"
-      (onclick)="btnCarrito($event)">
+      (onclick)="btnCarrito()">
     </shared-btn-circle>
   </div>
 </div>

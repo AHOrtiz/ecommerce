@@ -23,6 +23,8 @@
     [text]="text"
     (onclick)="isButtonClicked()">
   </shared-btn-action>
-  <shared-second-card [titulo]="nombreProduct" [precio]="price"></shared-second-card>
+  <shared-second-card
+    [product]="productTest">
+  </shared-second-card>
   <shared-technical-details [headers]="headers" [title]="title_table" [rows]="rows"></shared-technical-details>
 </body>

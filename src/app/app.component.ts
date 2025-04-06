@@ -1,3 +1,4 @@
+import { Product } from './shared/models/product.model';
 import { Component } from '@angular/core';
 
 
@@ -10,6 +11,14 @@ export class AppComponent {
   title = 'amazon';
   public currentTheme = 'light-theme';
   public  nombreProduct = 'Luxe Lounge Sofa';
+  public productTest: Product = {
+    title: 'Sofa',
+    price: 100.00,
+    img: 'assets/imgs/sofa.png',
+    hasDiscount: true,
+    discount: 10,
+    isFavorite: false
+  }
   price =235.99
   text:string='Buy Nowñopiy';
   headers: [string,string]=['Features','Details'];
