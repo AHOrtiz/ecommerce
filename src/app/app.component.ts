@@ -30,7 +30,9 @@ export class AppComponent {
   }
   btnAction(event:boolean){
     alert('Btn de accion');
-
+  }
+  isButtonClicked(){
+    alert('Btn de accion');
   }
 
   public toggleTheme(event :boolean): void {
