@@ -1,0 +1,12 @@
+<div #container>
+   <div class="container">
+    <label for="">{{title}}</label>
+    <div class="icon-container" (click)="toggle()">
+      <i class="fa-solid fa-arrow-up"></i>
+   </div>
+   <div>
+       <label for="" *ngFor="let item of categories">{{item}}</label>
+   </div>
+   </div>
+
+</div>

@@ -1,3 +1,4 @@
+import { Categories } from './shared/components/categories/categories.component';
 import { Product } from './shared/models/product.model';
 import { Component } from '@angular/core';
 
@@ -32,7 +33,8 @@ export class AppComponent {
     ['Style','Modern'],
     ['Unit Count','1.0 Count']
   ];
-
+ caregory:Array<Categories> = [Categories.bedroom, Categories.decor];
+ title_category:string = 'Category'
   btnCarrito(event:boolean){
     alert('Holaaaaaaa');
     console.log('entroo')

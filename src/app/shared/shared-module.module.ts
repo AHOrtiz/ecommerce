@@ -12,6 +12,7 @@ import { AskAndAnswerComponent } from './components/ask-and-answer/ask-and-answe
 import { BtnActionComponent } from './components/btn-action/btn-action.component';
 import { SecondCardComponent } from './components/second-card/second-card.component';
 import { TechnicalDetailsComponent } from './components/technical-details/technical-details.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 
 
@@ -28,6 +29,7 @@ import { TechnicalDetailsComponent } from './components/technical-details/techni
     BtnActionComponent,
     SecondCardComponent,
     TechnicalDetailsComponent,
+    CategoriesComponent,
 
     // Pipes
     ToStringPipe
@@ -46,7 +48,8 @@ import { TechnicalDetailsComponent } from './components/technical-details/techni
     AskAndAnswerComponent,
     BtnActionComponent,
     SecondCardComponent,
-    TechnicalDetailsComponent
+    TechnicalDetailsComponent,
+    CategoriesComponent
   ]
 })
 export class SharedModuleModule { }
