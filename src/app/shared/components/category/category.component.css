@@ -1,8 +1,7 @@
-.main{
-  display: flex;
-  width: 300px;
-  flex-direction: column;
-  align-items: center;
+:host {
+  width: fit-content;
+  height: auto;
+  display: block;
 }
 
 .circle-img{
@@ -14,14 +13,27 @@
   justify-content: center;
   align-items: center;
 }
- img{
-  width: 60%;
+
+.circle-img img {
+  width: 70%;
   text-align: center;
 }
 
 .text{
-display: flex;
-align-items: center;
-flex-direction: column;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.text .title {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  margin-bottom: 2px;
+}
+
+.text .description {
+  font-size: var(--font-size-small);
 }
 

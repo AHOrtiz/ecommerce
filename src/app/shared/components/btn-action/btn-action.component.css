@@ -1,21 +1,24 @@
 :host {
-  width: 70px;
+  width: fit-content;
   height: auto;
   display: block;
 }
 
-
-
-.button-text{
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 12px;
+button {
+  border-radius: 50em;
   cursor: pointer;
-  padding: 5px;
+  padding: 0.8em 1.2em 0.8em 1em;
+  transition: all ease-in-out 0.2s;
+  font-size: var(--font-size-base);
+  border: 0px;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

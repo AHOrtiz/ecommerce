@@ -30,3 +30,8 @@ h1 {
   background-color: var(--secondary-color);
   color: var(--text-color);
 }
+
+
+shared-btn-action {
+  margin-left: 50px;
+}

@@ -1,3 +1,4 @@
+import { Product } from './../../models/product.model';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -6,14 +7,34 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./second-card.component.css']
 })
 export class SecondCardComponent {
-  @Input() titulo: string = '';
-  @Input() precio: number = 0;
+  @Input() product!: Product;
 
-  btnCarrito(event: boolean) {
-    alert('Holaaaaaaa');
-    console.log('entroo')
+  hasDiscount(): boolean {
+    if (this.product.hasDiscount) {
+      return true
+    }
+    return false
   }
+
+  getPrice(): number {
+    if (this.product.hasDiscount) {
+      return this.calcularNuevoPrecio(
+        this.product.price,
+        this.product.discount!
+      )
+    }
+    return this.product.price
+  }
+
+  private calcularNuevoPrecio(precio: number, descuento: number): number {
+    return precio - (precio * descuento / 100)
+  }
+
+  btnCarrito() {
+    console.log('click en boton de carro')
+  }
+
   OnclickCard() {
-    console.log('ando funcionado padre')
+    console.log('click en tarjeta')
   }
 }
