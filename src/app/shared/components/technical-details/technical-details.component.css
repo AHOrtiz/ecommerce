@@ -1,43 +1,61 @@
 :host {
-  width: 120px;
+  width: 100%;
   height: auto;
   display: block;
+  margin: 25px;
 }
 
-thead {
-  background-color: var(--text-color-button);
-  color: var(--text-color-ligth);
+label {
+  color: var(--text-color);
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-large);
-  text-align: left;
-  font-weight: bold;
-}
-
-th {
-  padding: 10px;
-  border: none;
-  text-align: center;
-}
-
-th:first-child {
-  border-top-left-radius: 10px;
-}
-
-th:last-child {
-  border-top-right-radius: 10px;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
 }
-  /**ESTILOS PARA CAMBIAR LOS COLORES DE LOS ROWS DE LA TABLA **/
+
+thead {
+  background-color: var(--text-color);
+  color: var(--text-color-ligth);
+  font-size: var(--font-size-normal);
+}
+
+thead th {
+  padding: 15px;
+  border: none;
+  text-align: left;
+}
+
+thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tbody td {
+  padding: 15px;
+}
+
+/**ESTILOS PARA CAMBIAR LOS COLORES DE LOS ROWS DE LA TABLA **/
 tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-  text-align: center;
+  border: 1px solid var(--background-secondary-color);
+  background-color: var(--background-secondary-color);
 }
 
 tbody tr:nth-child(odd) {
+  border: 1px solid var(--background-secondary-color);
   background-color: var(--background-color);
-  text-align: center;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
