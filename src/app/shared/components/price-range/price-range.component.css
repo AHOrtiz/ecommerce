@@ -1,0 +1,64 @@
+:host {
+  width: 220px;
+  height: fit-content;
+  border-radius: 1em;
+  border: 2px solid var(--background-secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header label {
+  color: var(--text-color);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-thin);
+  padding: 15px;
+}
+
+.header i {
+  padding: 15px;
+  font-size: .7em;
+  cursor: pointer;
+}
+
+.content {
+  width: 80%;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 15px;
+}
+
+.content .range {
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: var(--font-weight-thin);
+  margin-bottom: 5px;
+}
+
+.content input {
+  width: 100%;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
