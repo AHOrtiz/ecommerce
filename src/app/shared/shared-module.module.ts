@@ -13,6 +13,7 @@ import { BtnActionComponent } from './components/btn-action/btn-action.component
 import { SecondCardComponent } from './components/second-card/second-card.component';
 import { TechnicalDetailsComponent } from './components/technical-details/technical-details.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { PriceRangeComponent } from './components/price-range/price-range.component';
 
 
 
@@ -30,9 +31,11 @@ import { CategoriesComponent } from './components/categories/categories.componen
     SecondCardComponent,
     TechnicalDetailsComponent,
     CategoriesComponent,
+    PriceRangeComponent,
 
     // Pipes
-    ToStringPipe
+    ToStringPipe,
+
   ],
   imports: [
     CommonModule
@@ -49,7 +52,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     BtnActionComponent,
     SecondCardComponent,
     TechnicalDetailsComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    PriceRangeComponent
   ]
 })
 export class SharedModuleModule { }

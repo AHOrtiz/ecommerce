@@ -1,31 +1,6 @@
 <body>
   <shared-navbar (onclick)="toggleTheme($event)">
   </shared-navbar>
-
-  <shared-btn-circle [color_background]="'var(--secondary-color)'" [color_icon]="'var(--text-color-button)'"
-    [icon]="'fa-solid fa-cart-shopping'" (onclick)="btnCarrito($event)">
-  </shared-btn-circle>
-
-  <shared-btn-descuentos [color_background]="'var(--secondary-color)'" [label]="80">
-  </shared-btn-descuentos>
-  <shared-ask-and-answer></shared-ask-and-answer>
-  <shared-card-product [titulo]="nombreProduct" [precio]="price">
-  </shared-card-product>
-  <shared-counter-product (cuantityEmmit)="cuantity($event)"></shared-counter-product>
-  <shared-app-raiting [stars]="3.5"></shared-app-raiting>
-  <shared-category
-    [title]="'test'"
-    [description]="'description'">
-  </shared-category>
-  <shared-btn-action
-    [color_background]="'var(--secondary-color)'"
-    [color_text]="'var(--text-color)'"
-    [text]="text"
-    (onclick)="isButtonClicked()">
-  </shared-btn-action>
-  <shared-second-card
-    [product]="productTest">
-  </shared-second-card>
-  <shared-technical-details [headers]="headers" [title]="title_table" [rows]="rows"></shared-technical-details>
   <shared-categories [categories]="caregory" [title]="title_category"></shared-categories>
+  <shared-price-range></shared-price-range>
 </body>
