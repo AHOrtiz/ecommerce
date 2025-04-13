@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { User } from "src/app/core/domain/user.model";
-import { LoginUseCase } from "src/app/core/use-cases/login.use-case";
+import { User } from "src/app/auth/core/domain/user.model";
+import { LoginUseCase } from "src/app/auth/core/use-cases/login.use-case";
 import { AuthRepository } from "../repositories/auth.repository";
 
 @Injectable({
@@ -12,7 +12,7 @@ export class LoginUseCaseImpl extends LoginUseCase  {
     super();
   }
 
-  override execute(username: string, password: string): Observable<User> {
-    return this.authRepository.login(username, password)
+  override execute(email: string, password: string): Observable<User> {
+    return this.authRepository.login(email, password)
   }
 }
