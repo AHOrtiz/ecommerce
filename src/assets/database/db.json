@@ -13,6 +13,11 @@
       "email": "allison@hotmail.com",
       "password": "melody",
       "token": "123456"
+    },
+    {
+      "id": "5cf0",
+      "email": "test@hotmail.com",
+      "password": "melody"
     }
   ]
 }

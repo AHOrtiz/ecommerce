@@ -4,12 +4,12 @@ import { LoginUseCase } from 'src/app/auth/application/use-cases/interfaces/logi
 import { User } from 'src/app/auth/core/domain/user.model';
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  selector: 'app-register-page',
+  templateUrl: './register-page.component.html',
+  styleUrls: ['./register-page.component.css']
 })
-export class LoginPageComponent {
-  email: string = 'irwing@hotmail.com';
+export class RegisterPageComponent {
+  email: string = 'test@hotmail.com';
   password: string = 'melody';
 
   constructor(
@@ -17,13 +17,13 @@ export class LoginPageComponent {
     private router: Router
   ) {}
 
-  public onLogin(): void {
-    this.loginUseCase.execute(this.email, this.password).subscribe({
+  public onRegister(): void {
+    this.loginUseCase.executeRegister(this.email, this.password).subscribe({
       next: (user: User) => {
-        this.router.navigate(['/']);
+        this.router.navigate(['login']);
       },
       error: (error) => {
-        console.error('Login failed', error)
+        console.error('Register failed', error)
       }
     })
   }
