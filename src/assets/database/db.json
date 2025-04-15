@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "irwing",
+      "email": "irwing@hotmail.com",
+      "password": "melody",
+      "token": "123456"
+    },
+    {
+      "id": "2",
+      "username": "allison",
+      "email": "allison@hotmail.com",
+      "password": "melody",
+      "token": "123456"
+    }
+  ]
+}
