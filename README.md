@@ -9,6 +9,28 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
 
 ## DataBase
 
-Navigate to `http://localhost:3000/users`: List of users available
-⚠️ Navigate to `http://localhost:3000/products`: List of products available
+- `http://localhost:3000/users`   
+- `http://localhost:3000/products`
+- `http://localhost:3000/cart`    
+- `http://localhost:3000/orders`
+- `http://localhost:3000/categories`
 
+## Module Structure
+
+app/
+├── auth/                    # Modulo de Autenticacion
+│   ├── core/                # Capa de dominio y servicios globales
+│   │   ├── models/          # Entidades y modelos de dominio
+│   │   ├── use-cases/       # Casos de uso (lógica de negocio)
+│   │   └── repositories/    # Repositorios (lógica de negocio)
+│   ├── data/                # Capa de datos
+│   │   ├── repositories/    # Implementaciones de repositorios
+│   │   └── use-cases/       # Implementaciones de casos de uso
+│   ├── presentacion/        # Capa de presentacion
+│   │   ├── layout-page/     # Pagina que routea a pagians internas
+│   │   ├── pages/           # 
+│   │   │   ├── login/       # Pagina de Login de Usuario
+│   │   │   └── register/    # Pagina de Registro de usuario
+│   │   └── user/            # Funcionalidad de usuarios
+│   ├── app-routing.module.ts # Configuración de rutas principales
+│   └── app.module.ts        # Módulo

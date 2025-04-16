@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginUseCase } from 'src/app/auth/application/use-cases/interfaces/login.use-case';
-import { User } from 'src/app/auth/core/domain/user.model';
+import { User } from 'src/app/auth/core/models/user.model';
+import { AuthUseCase } from 'src/app/auth/core/use-cases/login.use-case';
 
 @Component({
   selector: 'app-register-page',
@@ -13,12 +13,12 @@ export class RegisterPageComponent {
   password: string = 'melody';
 
   constructor(
-    private loginUseCase: LoginUseCase,
+    private loginUseCase: AuthUseCase,
     private router: Router
   ) {}
 
   public onRegister(): void {
-    this.loginUseCase.executeRegister(this.email, this.password).subscribe({
+    this.loginUseCase.register(this.email, this.password).subscribe({
       next: (user: User) => {
         this.router.navigate(['login']);
       },
