@@ -16,27 +16,111 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
 - `http://localhost:3000/categories`
 
 ## Module Structure
-
-app/
-
-├── auth/                    # Modulo de Autenticacion
-
-│   ├── core/                # Capa de dominio y servicios globales
-
-│   │   ├── models/          # Entidades y modelos de dominio
-
-│   │   ├── use-cases/       # Casos de uso (lógica de negocio)
-
-│   │   └── repositories/    # Repositorios (lógica de negocio)
-
-│   ├── data/                # Capa de datos
-│   │   ├── repositories/    # Implementaciones de repositorios
-│   │   └── use-cases/       # Implementaciones de casos de uso
-│   ├── presentacion/        # Capa de presentacion
-│   │   ├── layout-page/     # Pagina que routea a pagians internas
-│   │   ├── pages/           # 
-│   │   │   ├── login/       # Pagina de Login de Usuario
-│   │   │   └── register/    # Pagina de Registro de usuario
-│   │   └── user/            # Funcionalidad de usuarios
-│   ├── app-routing.module.ts # Configuración de rutas principales
-│   └── app.module.ts        # Módulo
+├── app
+|  ├── app-initialization.module.ts
+|  ├── app-routing.module.ts
+|  ├── app.component.html
+|  ├── app.component.scss
+|  ├── app.component.spec.ts
+|  ├── app.component.ts
+|  ├── app.config.ts
+|  ├── app.constant.ts
+|  ├── app.module.ts
+|  ├── core
+|  |  ├── auth
+|  |  |  ├── auth.module.ts
+|  |  |  ├── guards
+|  |  |  ├── helpers
+|  |  |  |  ├── auth-interceptor.ts
+|  |  |  |  ├── error-interceptor.ts
+|  |  |  |  ├── fake-backend.ts
+|  |  |  |  └── jwt-interceptor.ts
+|  |  |  ├── services
+|  |  |  └── types
+|  |  └── core.module.ts
+|  ├── features
+|  |  └── feature-example
+|  |     ├── components
+|  |     |  └── component-example
+|  |     |     └── README.md
+|  |     ├── containers
+|  |     |  └── container-example
+|  |     |     └── README.md
+|  |     ├── feature-example-routing.module.ts
+|  |     ├── feature-example.config.ts
+|  |     ├── feature-example.constants.ts
+|  |     ├── feature-example.module.ts
+|  |     ├── helpers
+|  |     |  └── example.helpers.ts
+|  |     ├── services
+|  |     |  └── example.service.ts
+|  |     ├── store
+|  |     |  ├── feature-example.actions.ts
+|  |     |  ├── feature-example.effects.ts
+|  |     |  ├── feature-example.reducers.ts
+|  |     |  ├── feature-example.selectors.ts
+|  |     |  └── index.ts
+|  |     ├── types
+|  |     |  └── example.ts
+|  |     └── views
+|  |        └── view-example
+|  |           └── README.md
+|  ├── layout
+|  |  ├── footer
+|  |  ├── header
+|  |  |  ├── header.component.html
+|  |  |  ├── header.component.scss
+|  |  |  └── header.component.ts
+|  |  ├── layout.module.ts
+|  |  └── nav
+|  |     ├── nav.component.html
+|  |     ├── nav.component.scss
+|  |     └── nav.component.ts
+|  ├── shared
+|  |  ├── components
+|  |  |  ├── complex-component-example
+|  |  |  |  ├── complex.component.html
+|  |  |  |  ├── complex.component.scss
+|  |  |  |  ├── complex.component.ts
+|  |  |  |  ├── complex.module.ts
+|  |  |  |  ├── components
+|  |  |  |  |  ├── example-type.ts
+|  |  |  |  |  ├── sub.component.html
+|  |  |  |  |  ├── sub.component.scss
+|  |  |  |  |  └── sub.component.ts
+|  |  |  |  └── types
+|  |  |  |     └── type-example.ts
+|  |  |  └── simple-component-example
+|  |  |     ├── example-type.ts
+|  |  |     ├── simple.component.html
+|  |  |     ├── simple.component.scss
+|  |  |     └── simple.component.ts
+|  |  ├── directives
+|  |  |  └── directive-example.directive.ts
+|  |  ├── helpers
+|  |  |  └── helpers-example.helpers.ts
+|  |  ├── pipes
+|  |  |  └── pipe-example.pipe.ts
+|  |  ├── shared.module.ts
+|  |  └── types
+|  |     └── type-example.ts
+|  ├── styles
+|  |  ├── base.scss
+|  |  ├── reset.scss
+|  |  └── variables.scss
+|  └── views
+|     ├── page-not-found
+|     |  ├── page-not-found.view.html
+|     |  ├── page-not-found.view.scss
+|     |  └── page-not-found.view.ts
+|     └── views.module.ts
+├── assets
+├── environments
+|  ├── environment.prod.ts
+|  └── environment.ts
+├── favicon.ico
+├── index.html
+├── main.ts
+├── polyfills.ts
+├── styles.scss
+└── test.ts
