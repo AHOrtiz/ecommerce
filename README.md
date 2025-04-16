@@ -18,11 +18,17 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
 ## Module Structure
 
 app/
+
 ├── auth/                    # Modulo de Autenticacion
+
 │   ├── core/                # Capa de dominio y servicios globales
+
 │   │   ├── models/          # Entidades y modelos de dominio
+
 │   │   ├── use-cases/       # Casos de uso (lógica de negocio)
+
 │   │   └── repositories/    # Repositorios (lógica de negocio)
+
 │   ├── data/                # Capa de datos
 │   │   ├── repositories/    # Implementaciones de repositorios
 │   │   └── use-cases/       # Implementaciones de casos de uso
