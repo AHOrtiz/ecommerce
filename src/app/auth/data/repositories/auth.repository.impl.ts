@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { AuthRepository } from 'src/app/auth/application/repositories/interfaces/auth.repository';
-import { User } from 'src/app/auth/core/domain/user.model';
+import { User } from 'src/app/auth/core/models/user.model';
+import { AuthRepository } from '../../core/repositories/auth.repository';
 
 @Injectable({providedIn: 'root'})
 export class AuthRepositoryImpl extends AuthRepository {

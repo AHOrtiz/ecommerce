@@ -1,7 +1,7 @@
-import { Observable } from 'rxjs';
-import { User } from 'src/app/auth/core/domain/user.model';
+import { User } from '../models/user.model';
+import { Observable } from "rxjs";
 
-export abstract class AuthRepository {
+export abstract class AuthUseCase {
   abstract login(email: string, password: string): Observable<User>
   abstract register(email: string, password: string): Observable<User>
 }
