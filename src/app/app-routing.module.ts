@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Error404PageComponent } from './shared/components/error404-page/error404-page.component';
 
 // dominio.com/
 const routes: Routes = [
@@ -8,14 +9,22 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule ),
   },
   {
+    path: 'inicio',
+   loadChildren:()=>import('./home/home.module').then(m =>m.HomeModule)
+  },
+  {
     path: '',
-    redirectTo: '', // aqui hay que crear el modulo de home
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
+    path:'404',
+    component:Error404PageComponent
+  },
+  {
     path: '**',
-    redirectTo: 'auth',
-  }
+    redirectTo: '404',
+  },
 ];
 
 @NgModule({

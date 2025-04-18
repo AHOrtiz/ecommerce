@@ -14,6 +14,7 @@ import { SecondCardComponent } from './components/second-card/second-card.compon
 import { TechnicalDetailsComponent } from './components/technical-details/technical-details.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { PriceRangeComponent } from './components/price-range/price-range.component';
+import { Error404PageComponent } from './components/error404-page/error404-page.component';
 
 
 
@@ -32,9 +33,10 @@ import { PriceRangeComponent } from './components/price-range/price-range.compon
     TechnicalDetailsComponent,
     CategoriesComponent,
     PriceRangeComponent,
-
+    Error404PageComponent,
     // Pipes
     ToStringPipe,
+
 
   ],
   imports: [
@@ -53,7 +55,8 @@ import { PriceRangeComponent } from './components/price-range/price-range.compon
     SecondCardComponent,
     TechnicalDetailsComponent,
     CategoriesComponent,
-    PriceRangeComponent
+    PriceRangeComponent,
+    Error404PageComponent,
   ]
 })
 export class SharedModuleModule { }
