@@ -1,13 +1,14 @@
-<div>
-    <h1>Register</h1>
+<div class="main-login">
+    <h1>Register New User</h1>
     <form (ngSubmit)="onRegister()">
       <label for="email">Email:</label>
-      <input id="email" [(ngModel)]="email" name="email" required>
-  
+      <input id="email" [(ngModel)]="email" name="email" required type="text">
+
       <label for="password">Password:</label>
-      <input id="password" [(ngModel)]="password" name="password" required>
-  
+      <input id="password" [(ngModel)]="password" name="password" required type="text">
+
       <button type="submit">Sign up</button>
+      <button type="submit" class="btn-google" routerLink="/auth/login">Back</button>
     </form>
+
   </div>
-  

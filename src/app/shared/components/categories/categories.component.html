@@ -1,12 +1,11 @@
-<div #container>
-   <div class="container">
-    <label for="">{{title}}</label>
-    <div class="icon-container" (click)="toggle()">
-      <i class="fa-solid fa-arrow-up"></i>
-   </div>
-   <div>
-       <label for="" *ngFor="let item of categories">{{item}}</label>
-   </div>
-   </div>
+<div #container class="main-container">
+  <label for="">{{title}}</label>
+   <i #icon (click)="toggle()" class="fa-solid fa-chevron-down"></i>
 
+</div>
+<div #containerCategories class="body-container">
+  <label for="{{item}}" *ngFor="let item of categories">
+    <input type="radio" [value]="item" name="categories" id="{{item}}">
+    {{item}}
+  </label>
 </div>
