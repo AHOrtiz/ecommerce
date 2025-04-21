@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'shared-categories',
@@ -8,10 +8,19 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 export class CategoriesComponent {
   @Input() title: string = '';
   @Input() categories:Array<Categories> = new Array();
+  @Output() categorySelected = new EventEmitter<Categories>();
+
   @ViewChild('container',{static:true}) containerElement?: ElementRef<HTMLDivElement>;
   @ViewChild('containerCategories',{static:true}) containerCategories?: ElementRef<HTMLDivElement>;
   @ViewChild('icon',{static:true}) icon?: ElementRef<HTMLLabelElement>;
-  public isOpen: Boolean = false
+  public selectedCategory: Categories | null = null;
+
+selectCategory(category: Categories) {
+  this.selectedCategory = category;
+  this.categorySelected.emit(category);
+}
+
+  public isOpen: Boolean = false;
   public toggle(){
     this.isOpen = !this.isOpen;
 

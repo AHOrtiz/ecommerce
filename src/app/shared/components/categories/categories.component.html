@@ -4,8 +4,9 @@
 
 </div>
 <div #containerCategories class="body-container">
-  <label for="{{item}}" *ngFor="let item of categories">
-    <input type="radio" [value]="item" name="categories" id="{{item}}">
+  <label for="{{item}}" *ngFor="let item of categories"    [ngClass]="{ 'selected': selectedCategory === item }"
+  class="category-option">
+    <input type="radio" [value]="item" name="categories" id="{{item}}" (change)="selectCategory(item)">
     {{item}}
   </label>
 </div>
