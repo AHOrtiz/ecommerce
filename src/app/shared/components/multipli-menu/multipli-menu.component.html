@@ -1,0 +1,11 @@
+<div #container class="main-container">
+  <label for="">{{title}}</label>
+   <i #icon (click)="toggle()" class="fa-solid fa-chevron-down"></i>
+</div>
+
+<div #containerOptions class="body-container">
+    <label for="{{item}}" *ngFor="let item of options">
+      <input type="checkbox" [value]="item" name="options" [id]="item" (change)="onOptionChange($event, item)">
+      {{item}}
+    </label>
+</div>

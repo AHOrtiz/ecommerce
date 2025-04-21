@@ -15,6 +15,7 @@ import { TechnicalDetailsComponent } from './components/technical-details/techni
 import { CategoriesComponent } from './components/categories/categories.component';
 import { PriceRangeComponent } from './components/price-range/price-range.component';
 import { Error404PageComponent } from './components/error404-page/error404-page.component';
+import { MultipliMenuComponent } from './components/multipli-menu/multipli-menu.component';
 
 
 
@@ -34,8 +35,10 @@ import { Error404PageComponent } from './components/error404-page/error404-page.
     CategoriesComponent,
     PriceRangeComponent,
     Error404PageComponent,
+    MultipliMenuComponent,
     // Pipes
     ToStringPipe,
+
 
 
   ],
@@ -57,6 +60,7 @@ import { Error404PageComponent } from './components/error404-page/error404-page.
     CategoriesComponent,
     PriceRangeComponent,
     Error404PageComponent,
+    MultipliMenuComponent,
   ]
 })
 export class SharedModuleModule { }
