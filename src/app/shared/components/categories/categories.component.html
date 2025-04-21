@@ -1,12 +1,13 @@
-<div #container class="main-container">
-  <label for="">{{title}}</label>
-   <i #icon (click)="toggle()" class="fa-solid fa-chevron-down"></i>
+<div #container class="container noselect">
+  <div class="header-container">
+    <label for="">{{title}}</label>
+    <i #icon (click)="toggle()" class="fa-solid fa-chevron-up"></i>
+  </div>
 
-</div>
-<div #containerCategories class="body-container">
-  <label for="{{item}}" *ngFor="let item of categories"    [ngClass]="{ 'selected': selectedCategory === item }"
-  class="category-option">
-    <input type="radio" [value]="item" name="categories" id="{{item}}" (change)="selectCategory(item)">
-    {{item}}
-  </label>
+  <div #bodyContainer class="body-container">
+    <label for="{{item}}" *ngFor="let item of categories" [ngClass]="{ 'selected': selectedCategory === item }" class="category-option">
+      <input type="radio" [value]="item" name="categories" id="{{item}}" (change)="selectCategory(item)">
+      {{item}}
+    </label>
+  </div>
 </div>
