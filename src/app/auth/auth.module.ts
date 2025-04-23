@@ -10,6 +10,10 @@ import { AuthRepository } from './core/repositories/auth.repository';
 import { LoginUseCaseImpl } from './data/use-cases/login.use-case.impl';
 import { AuthRepositoryImpl } from './data/repositories/auth.repository.impl';
 import { AuthUseCase } from './core/use-cases/login.use-case';
+import { TokenRepository } from './core/repositories/token.repository';
+import { TokenRepositoryImpl } from './data/repositories/token.repository.impl';
+import { TokenUseCase } from './core/use-cases/token.use-case';
+import { TokenUseCaseImpl } from './data/use-cases/token.use-case.impl';
 
 @NgModule({
   declarations: [
@@ -24,8 +28,14 @@ import { AuthUseCase } from './core/use-cases/login.use-case';
     AuthRoutingModule
   ],
   providers: [
+    // USES CASES
     { provide: AuthUseCase, useClass: LoginUseCaseImpl },
-    { provide: AuthRepository, useClass: AuthRepositoryImpl }
+    { provide: AuthRepository, useClass: AuthRepositoryImpl },
+    
+    
+    // REPOSITORIES
+    { provide: TokenUseCase, useClass: TokenUseCaseImpl },
+    { provide: TokenRepository, useClass: TokenRepositoryImpl }
   ]
 })
 export class AuthModule { }
