@@ -5,12 +5,13 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 
 import { User } from 'src/app/auth/core/models/user.model';
 import { AuthRepository } from '../../core/repositories/auth.repository';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({providedIn: 'root'})
 export class AuthRepositoryImpl extends AuthRepository {
 
-  private apiUrl = 'http://localhost:3000/api/v1/auth'
+  private baseUrl: string = `${environment.apiUrl}/auth`
   private currentUserSubject = new BehaviorSubject<any>(null);
 
   constructor(private http: HttpClient) { super(); }
@@ -22,7 +23,7 @@ export class AuthRepositoryImpl extends AuthRepository {
    * @returns Usuario existente
    */
   override login(email: string, password: string): Observable<User> {
-    return this.http.post<User>(`${this.apiUrl}/login`, {email, password}).pipe(
+    return this.http.post<User>(`${this.baseUrl}/login`, {email, password}).pipe(
       tap((response) => {
         if (response && response.token) {
           this.currentUserSubject.next(response)
@@ -38,7 +39,7 @@ export class AuthRepositoryImpl extends AuthRepository {
    * @returns Usuario creado
    */
   override register(email: string, password: string, username: string): Observable<User> {
-    return this.http.post<User>(`${this.apiUrl}/register`, {email, password, fullName: username}).pipe(
+    return this.http.post<User>(`${this.baseUrl}/register`, {email, password, fullName: username}).pipe(
       tap((response) => {
         if (response && response.token) {
           this.currentUserSubject.next(response);
