@@ -4,6 +4,9 @@ import { User } from "src/app/auth/core/models/user.model";
 import { AuthRepository } from "../../core/repositories/auth.repository";
 import { AuthUseCase } from "../../core/use-cases/login.use-case";
 
+
+/** SE EXTIENDE DE LA INTERFAZ */
+
 @Injectable({ providedIn: 'root' })
 export class LoginUseCaseImpl extends AuthUseCase  {
   constructor(private authRepository: AuthRepository) {

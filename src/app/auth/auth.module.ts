@@ -28,12 +28,13 @@ import { TokenUseCaseImpl } from './data/use-cases/token.use-case.impl';
     AuthRoutingModule
   ],
   providers: [
-    // USES CASES
+    // USES CASES Y REPOSITORIO DE AUTENTIFICACION
+    //* PROVIDE SE COLOCA LA INTERFAZ
     { provide: AuthUseCase, useClass: LoginUseCaseImpl },
     { provide: AuthRepository, useClass: AuthRepositoryImpl },
-    
-    
-    // REPOSITORIES
+
+
+    // REPOSITORIES Y REPOSITORIO DE TOKEN
     { provide: TokenUseCase, useClass: TokenUseCaseImpl },
     { provide: TokenRepository, useClass: TokenRepositoryImpl }
   ]

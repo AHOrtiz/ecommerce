@@ -10,8 +10,8 @@ import { TokenUseCase } from 'src/app/auth/core/use-cases/token.use-case';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent {
-  email: string = 'melody@hotmail.com';
-  password: string = 'Melody123$';
+  email: string = '';
+  password: string = '';
 
   constructor(
     private loginUseCase: AuthUseCase,
