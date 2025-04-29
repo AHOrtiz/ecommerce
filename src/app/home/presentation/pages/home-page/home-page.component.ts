@@ -1,24 +1,28 @@
-import { Component } from '@angular/core';
-import { Categories } from 'src/app/shared/components/categories/categories.component';
+import { Component, OnInit } from '@angular/core';
+import { CategoryUseCase } from 'src/app/home/core/use-cases/category.use-case';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent {
-   titleOptions : string = 'Martial';
-   optionsList =['Cloth', 'Wood','Glass','Plastic', 'Rattan']
-   title :string = 'Category';
-   categoriesList = [Categories.bedroom, Categories.livingRoom, Categories.office];
-   selectedMaterials: string[] = [];
-   onCategoryChange(category: Categories) {
-    console.log('Categoría seleccionada:', category);
+export class HomePageComponent implements OnInit {
+  constructor(
+    private categoryUseCase: CategoryUseCase
+  ) {}
 
+  public onLogin(): void {
+    this.categoryUseCase.findAll().subscribe({
+      next: (response: any) => {
+        console.log(response);
+      },
+      error: (error) => {
+        console.error('Login failed', error)
+      }
+    })
   }
 
-  onOptionsSelected(selected: string[]) {
-    this.selectedMaterials = selected;
-    console.log('Materiales seleccionados:', this.selectedMaterials);
+  ngOnInit(): void {
+    this.onLogin()
   }
 }

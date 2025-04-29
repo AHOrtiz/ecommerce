@@ -11,12 +11,4 @@ export class TokenUseCaseImpl extends TokenUseCase  {
   override save(token: string) {
     return this.tokenRepository.save(token)
   }
-
-  override get(): string | null {
-    return this.tokenRepository.get()
-  }
-  
-  override remove(): void {
-    return this.tokenRepository.remove()
-  }
 }
