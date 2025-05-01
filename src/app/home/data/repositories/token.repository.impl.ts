@@ -9,10 +9,10 @@ export class TokenRepositoryImpl extends TokenRepository {
 
     private readonly TOKEN_KEY = 'auth_token'
 
-    override get(): String | null {
+    override get(): string | null {
         return localStorage.getItem(this.TOKEN_KEY)
     }
-    
+
     override remove(): void {
         localStorage.removeItem(this.TOKEN_KEY)
     }

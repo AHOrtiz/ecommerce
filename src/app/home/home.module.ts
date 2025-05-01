@@ -8,10 +8,15 @@ import { CategoryRepository } from './core/repositories/category.repository';
 import { CategoryUseCase } from './core/use-cases/category.use-case';
 import { CategoryUseCaseImpl } from './data/use-cases/category.use-case.impl';
 import { CategoryRepositoryImpl } from './data/repositories/category.repository.impl';
+import { HttpClientModule ,HTTP_INTERCEPTORS} from '@angular/common/http';
+import { ProductUseCase } from './core/use-cases/product.use-case';
+import { ProductUseCaseImpl } from './data/use-cases/product.use-case.impl';
+import { ProductRepository } from './core/repositories/product.repository';
+import { ProductRepositoryImpl } from './data/repositories/product.repository.impl';
 import { TokenRepository } from './core/repositories/token.repository';
 import { TokenRepositoryImpl } from './data/repositories/token.repository.impl';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+
 
 
 @NgModule({
@@ -20,14 +25,18 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     HomePageComponent
   ],
   imports: [
-    CommonModule,
+
+
     HomeRoutingModule,
     SharedModuleModule,
-    HttpClientModule
+
+
   ],
   providers:[
      { provide: CategoryUseCase, useClass: CategoryUseCaseImpl },
      { provide: CategoryRepository, useClass: CategoryRepositoryImpl },
+     { provide: ProductUseCase,useClass:ProductUseCaseImpl},
+     { provide:ProductRepository, useClass:ProductRepositoryImpl},
      { provide: TokenRepository, useClass: TokenRepositoryImpl },
      { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ]

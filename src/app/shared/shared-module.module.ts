@@ -16,6 +16,10 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { PriceRangeComponent } from './components/price-range/price-range.component';
 import { Error404PageComponent } from './components/error404-page/error404-page.component';
 import { MultipliMenuComponent } from './components/multipli-menu/multipli-menu.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -38,12 +42,14 @@ import { MultipliMenuComponent } from './components/multipli-menu/multipli-menu.
     MultipliMenuComponent,
     // Pipes
     ToStringPipe,
+    CarruselComponent,
 
 
 
   ],
   imports: [
-    CommonModule
+ CommonModule
+
   ],
   exports:[
     BtnDescuentosComponent,
@@ -61,6 +67,7 @@ import { MultipliMenuComponent } from './components/multipli-menu/multipli-menu.
     PriceRangeComponent,
     Error404PageComponent,
     MultipliMenuComponent,
+    CarruselComponent
   ]
 })
 export class SharedModuleModule { }

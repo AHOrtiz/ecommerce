@@ -9,18 +9,14 @@ import { Category } from '../../core/models/category.model';
 
 @Injectable({providedIn: 'root'})
 export class CategoryRepositoryImpl extends CategoryRepository {
-  
+
   private baseUrl: string = `${environment.apiUrl}/categories`;
   private categorySubject = new BehaviorSubject<any>(null);
 
   constructor(private http: HttpClient) { super(); }
 
   override create(name: string): Observable<Category> {
-     return this.http.post<Category>(`${this.baseUrl}`,{name}).pipe(
-      tap((response)=>{
-          this.categorySubject.next(response)
-      })
-     )
+     return this.http.post<Category>(`${this.baseUrl}`,{name});
   }
 
   override delete(id: string): Observable<Boolean> {

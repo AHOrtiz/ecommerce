@@ -6,23 +6,10 @@ import { CategoryUseCase } from 'src/app/home/core/use-cases/category.use-case';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent implements OnInit {
-  constructor(
-    private categoryUseCase: CategoryUseCase
-  ) {}
+export class HomePageComponent {
+  constructor( ) {}
 
-  public onLogin(): void {
-    this.categoryUseCase.findAll().subscribe({
-      next: (response: any) => {
-        console.log(response);
-      },
-      error: (error) => {
-        console.error('Login failed', error)
-      }
-    })
-  }
 
-  ngOnInit(): void {
-    this.onLogin()
-  }
+
+
 }

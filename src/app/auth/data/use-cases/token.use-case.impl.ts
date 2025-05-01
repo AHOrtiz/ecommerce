@@ -4,7 +4,7 @@ import { TokenUseCase } from "../../core/use-cases/token.use-case";
 
 @Injectable({ providedIn: 'root' })
 export class TokenUseCaseImpl extends TokenUseCase  {
-  constructor(private tokenRepository: TokenRepository) { 
+  constructor(private tokenRepository: TokenRepository) {
     super();
   }
 
