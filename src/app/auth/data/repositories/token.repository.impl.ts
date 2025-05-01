@@ -13,10 +13,4 @@ export class TokenRepositoryImpl extends TokenRepository {
   override save(token: string): void {
     localStorage.setItem(this.TOKEN_KEY, token)
   }
-  override get(): string | null {
-    return localStorage.getItem(this.TOKEN_KEY)
-  }
-  override remove(): void {
-    localStorage.removeItem(this.TOKEN_KEY)
-  }
 }

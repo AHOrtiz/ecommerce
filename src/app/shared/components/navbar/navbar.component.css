@@ -16,8 +16,7 @@ header {
 
 /* Logo */
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  width: 4em;
 }
 
 .logo span {

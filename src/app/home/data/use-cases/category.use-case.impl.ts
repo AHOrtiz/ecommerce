@@ -5,8 +5,6 @@ import { CategoryUseCase } from "../../core/use-cases/category.use-case";
 import { Category } from "../../core/models/category.model";
 import { CategoryRepository } from "../../core/repositories/category.repository";
 
-
-
 /** SE EXTIENDE DE LA INTERFAZ */
 
 @Injectable({ providedIn: 'root' })
@@ -24,6 +22,4 @@ export class CategoryUseCaseImpl extends CategoryUseCase  {
   override findAll(): Observable<Category[]> {
      return this.categoryRepository.findAll()
   }
-
-
 }
