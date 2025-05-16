@@ -14,6 +14,7 @@ import { TokenRepository } from './core/repositories/token.repository';
 import { TokenRepositoryImpl } from './data/repositories/token.repository.impl';
 import { TokenUseCase } from './core/use-cases/token.use-case';
 import { TokenUseCaseImpl } from './data/use-cases/token.use-case.impl';
+import { SharedModule } from '../shared/shared-module.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TokenUseCaseImpl } from './data/use-cases/token.use-case.impl';
     CommonModule,
     FormsModule,
     HttpClientModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    SharedModule
   ],
   providers: [
     // USES CASES Y REPOSITORIO DE AUTENTIFICACION

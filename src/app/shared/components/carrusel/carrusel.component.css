@@ -1,7 +1,5 @@
-
 .slider {
-  width: 800px;
-  height: 400px;
+  width: 90%;
   overflow: hidden;
   position: relative;
   background: #e6e6e6;
@@ -10,9 +8,8 @@
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .arrow {

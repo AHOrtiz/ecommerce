@@ -70,4 +70,4 @@ import { BrowserModule } from '@angular/platform-browser';
     CarruselComponent
   ]
 })
-export class SharedModuleModule { }
+export class SharedModule { }
