@@ -3,19 +3,25 @@
     <ng-template ngFor [ngForOf]="slides" let-slide let-i="index">
       <img class="slide slide-animation nonDraggableImage"
            *ngIf="isCurrentSlideIndex(i)"
-           (swiperight)="nextSlide()" (swipeleft)="prevSlide()"
-           [src]="slide.image">
+           [src]="slide.image"
+           [alt]="slide.description"
+           (swiperight)="prevSlide()"
+           (swipeleft)="nextSlide()">
     </ng-template>
   </div>
 
-  <button class="arrow prev" (click)="nextSlide()"></button>
-  <button class="arrow next" (click)="prevSlide()"></button>
+  <button class="arrow prev" (click)="prevSlide()"></button>
+  <button class="arrow next" (click)="nextSlide()"></button>
+
   <nav class="nav">
     <div class="wrapper">
       <ul class="dots">
-        <li class="dot" *ngFor="let slide of slides; let i = index;">
-          <span [ngClass]="{'active':isCurrentSlideIndex(i)}"
-             (click)="setCurrentSlideIndex(i);">{{slide.description}}</span></li>
+        <li class="dot" *ngFor="let slide of slides; let i = index">
+          <span [ngClass]="{'active': isCurrentSlideIndex(i)}"
+                (click)="setCurrentSlideIndex(i)">
+            {{ slide.description }}
+          </span>
+        </li>
       </ul>
     </div>
   </nav>

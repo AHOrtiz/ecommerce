@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { slideAnimation } from '../../utils/animations/slide.animation';
 
 @Component({
@@ -8,39 +8,64 @@ import { slideAnimation } from '../../utils/animations/slide.animation';
   animations: [slideAnimation]
 })
 export class CarruselComponent {
-  currentIndex = 0;
-  slides = [
-    {image: 'assets/imgs/cielo.jpg', description: 'Image 00'},
-    {image: 'assets/imgs/muelle.jpg', description: 'Image 01'},
-    {image: 'assets/imgs/paisaje.jpg', description: 'Image 02'},
-    {image: 'assets/imgs/perrito.jpg', description: 'Image 03'},
-    {image: 'assets/imgs/sofa.png', description: 'Image 04'}
-  ];
+  @Input() images: any[] = [];
 
-  constructor() {
+  slides: any[] = [];
+  currentIndex = 0;
+
+  ngOnChanges() {
+    this.generateSlides();
     this.preloadImages();
   }
 
-  preloadImages() {
-    this.slides.forEach(slide => {
-      (new Image()).src = slide.image;
-    });
-    console.log('slides: ', this.slides)
+  /**
+   * Converts the input images into slide objects with descriptions.
+   */
+  private generateSlides() {
+    this.slides = this.images.map((image, index) => ({
+      image,
+      description: `Image ${index.toString().padStart(2, '0')}`,
+    }));
   }
 
-  setCurrentSlideIndex(index:number) {
+  /**
+   * Preloads all images to avoid flickering.
+   */
+  private preloadImages() {
+    this.slides.forEach(slide => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+  }
+
+  /**
+   * Sets the current slide index.
+   * @param index The slide index to display.
+   */
+  setCurrentSlideIndex(index: number) {
     this.currentIndex = index;
   }
 
-  isCurrentSlideIndex(index:number) {
+  /**
+   * Checks if the given index is the current slide index.
+   * @param index The index to check.
+   * @returns Whether the index matches the current slide index.
+   */
+  isCurrentSlideIndex(index: number): boolean {
     return this.currentIndex === index;
   }
 
+  /**
+   * Moves to the previous slide.
+   */
   prevSlide() {
-    this.currentIndex = (this.currentIndex < this.slides.length - 1) ? ++this.currentIndex : 0;
+    this.currentIndex = (this.currentIndex > 0) ? --this.currentIndex : this.slides.length - 1;
   }
 
+  /**
+   * Moves to the next slide.
+   */
   nextSlide() {
-    this.currentIndex = (this.currentIndex > 0) ? --this.currentIndex : this.slides.length - 1;
+    this.currentIndex = (this.currentIndex < this.slides.length - 1) ? ++this.currentIndex : 0;
   }
 }

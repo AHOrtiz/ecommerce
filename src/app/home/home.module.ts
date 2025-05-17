@@ -16,6 +16,11 @@ import { ProductRepositoryImpl } from './data/repositories/product.repository.im
 import { TokenRepository } from './core/repositories/token.repository';
 import { TokenRepositoryImpl } from './data/repositories/token.repository.impl';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { BannerUseCase } from './core/use-cases/banner.use-case';
+import { BannerUseCaseImpl } from './data/use-cases/banner.use-case.impl';
+import { BannerRepository } from './core/repositories/banner.repository';
+import { BannerRepositoryImpl } from './data/repositories/banner.repository.impl';
+
 
 
 
@@ -38,6 +43,8 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
      { provide: ProductUseCase,useClass:ProductUseCaseImpl},
      { provide:ProductRepository, useClass:ProductRepositoryImpl},
      { provide: TokenRepository, useClass: TokenRepositoryImpl },
+     { provide: BannerUseCase, useClass: BannerUseCaseImpl },
+      { provide: BannerRepository, useClass: BannerRepositoryImpl },
      { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ]
 })
