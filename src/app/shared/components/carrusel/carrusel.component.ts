@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { slideAnimation } from '../../utils/animations/slide.animation';
+import { Banner } from 'src/app/home/core/models/banner.model';
 
 @Component({
   selector: 'shared-carrusel',
@@ -8,22 +9,17 @@ import { slideAnimation } from '../../utils/animations/slide.animation';
   animations: [slideAnimation]
 })
 export class CarruselComponent {
-  @Input() images: any[] = [];
+  @Input() banners: Banner[] = [];
 
-  slides: any[] = [];
-  currentIndex = 0;
-
-  ngOnChanges() {
-    this.generateSlides();
-    this.preloadImages();
-  }
+  public slides: any[] = [];
+  public currentIndex = 0;
 
   /**
    * Converts the input images into slide objects with descriptions.
    */
   private generateSlides() {
-    this.slides = this.images.map((image, index) => ({
-      image,
+    this.slides = this.banners.map((banner: Banner, index: number) => ({
+      banner,
       description: `Image ${index.toString().padStart(2, '0')}`,
     }));
   }
@@ -34,7 +30,7 @@ export class CarruselComponent {
   private preloadImages() {
     this.slides.forEach(slide => {
       const img = new Image();
-      img.src = slide.image;
+      img.src = slide.banner.imageUrl;
     });
   }
 
@@ -67,5 +63,10 @@ export class CarruselComponent {
    */
   nextSlide() {
     this.currentIndex = (this.currentIndex < this.slides.length - 1) ? ++this.currentIndex : 0;
+  }
+
+  ngOnChanges() {
+    this.generateSlides();
+    this.preloadImages();
   }
 }

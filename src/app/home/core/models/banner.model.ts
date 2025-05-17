@@ -1,7 +1,6 @@
-
 export interface Banner {
-    id:       string;
-    name:     string;
+    id: string;
+    name: string;
     imageUrl: string;
     category: string;
 }
