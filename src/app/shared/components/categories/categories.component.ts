@@ -13,7 +13,7 @@ export class CategoriesComponent {
   @ViewChild('container', { static: true }) headerContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('bodyContainer', { static: true }) bodyContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('icon', { static: true }) icon?: ElementRef<HTMLLabelElement>;
-  
+
   public selectedCategory: Categories | null = null;
   public isOpen: Boolean = false;
 

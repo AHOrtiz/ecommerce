@@ -20,6 +20,7 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { TruncateTextPipe } from './utils/pipes/truncate-text.pipe';
 
 
 
@@ -43,6 +44,7 @@ import { BrowserModule } from '@angular/platform-browser';
     // Pipes
     ToStringPipe,
     CarruselComponent,
+    TruncateTextPipe,
 
 
 

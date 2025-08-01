@@ -9,12 +9,12 @@
       <i class="fa fa-heart fas"></i>
     </div>
 
-    <img [src]="product.img" alt="">
+    <img [src]="product.imageUrl" alt="">
   </div>
 
   <div class="footer">
     <div class="card-text">
-      <label class="title">{{product.title}}</label>
+      <label class="title">{{product.name | truncateText:[15, '...']}}</label>
       <label class="price">${{getPrice()}}</label>
     </div>
 

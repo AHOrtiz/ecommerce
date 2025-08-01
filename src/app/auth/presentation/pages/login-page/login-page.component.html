@@ -1,15 +1,23 @@
+<div class="background-circles"></div>
+
 <div class="main-login">
-  <h1>welcome back</h1>
-  <label for="">Welcome back! Please enter your details</label>
-  <form (ngSubmit)="onLogin()">
-    <label for="email">Email:</label>
-    <input id="email" [(ngModel)]="email" name="email" required type="text">
+  <div class="main-card">
+    <div class="background-shape">
+        <h1>Welcome back</h1>
+    </div>
 
-    <label for="password">Password:</label>
-    <input id="password" [(ngModel)]="password" name="password" required type="text">
+    <label for="">Welcome back! Please enter your details</label>
+    <form (ngSubmit)="onLogin()">
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="email" name="email" required type="text">
 
-    <button type="submit">Login</button>
-    <button type="submit" class="btn-google">Sign in with Gooegle</button>
-  </form>
-  <label for="">Don´t have an account? <strong><a routerLink="/auth/register">Sign up for free</a></strong></label>
+      <label for="password">Password:</label>
+      <input id="password" [(ngModel)]="password" name="password" required type="text">
+
+      <button type="submit">Login</button>
+      <button type="submit" class="btn-google">Sign in with Google</button>
+    </form>
+    <label for="">Don´t have an account? <strong><a routerLink="/auth/register">Sign up for free</a></strong></label>
+  </div>
+
 </div>

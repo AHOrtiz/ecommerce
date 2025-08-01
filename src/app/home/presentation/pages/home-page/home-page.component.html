@@ -1,3 +1,9 @@
 <shared-navbar></shared-navbar>
 
 <shared-carrusel [banners]="banners"></shared-carrusel>
+
+<div class="container-products">
+  <shared-second-card *ngFor="let item of productsLimit"  [product]="item" class="card-individual"></shared-second-card>
+</div>
+
+

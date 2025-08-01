@@ -1,0 +1,8 @@
+
+.container-products{
+  display: flex;
+
+}
+.card-individual{
+    margin-left: 15px;
+}
