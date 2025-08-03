@@ -8,13 +8,15 @@
       </shared-btn-descuentos>
       <i class="fa fa-heart fas"></i>
     </div>
+  </div>
 
-    <img [src]="product.imageUrl" alt="">
+  <div class="image-container">
+    <img [src]="product.imageUrl" [alt]="product.name">
   </div>
 
   <div class="footer">
     <div class="card-text">
-      <label class="title">{{product.name | truncateText:[15, '...']}}</label>
+      <label class="title">{{product.name | truncateText:[50, '...']}}</label>
       <label class="price">${{getPrice()}}</label>
     </div>
 

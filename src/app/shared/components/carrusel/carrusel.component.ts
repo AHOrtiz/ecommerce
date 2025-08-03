@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { slideAnimation } from '../../utils/animations/slide.animation';
-import { Banner } from 'src/app/home/core/models/banner.model';
+import { CarruselImage } from '../../models/carrusel-mage.model';
 
 @Component({
   selector: 'shared-carrusel',
@@ -9,64 +9,24 @@ import { Banner } from 'src/app/home/core/models/banner.model';
   animations: [slideAnimation]
 })
 export class CarruselComponent {
-  @Input() banners: Banner[] = [];
+  @Input() images: CarruselImage[] = [];
+  @Input() indicators = true;
 
-  public slides: any[] = [];
-  public currentIndex = 0;
+  public selectedIndex = 0;
+  constructor() {}
 
-  /**
-   * Converts the input images into slide objects with descriptions.
-   */
-  private generateSlides() {
-    this.slides = this.banners.map((banner: Banner, index: number) => ({
-      banner,
-      description: `Image ${index.toString().padStart(2, '0')}`,
-    }));
+  ngOnInit(): void {
+    this.autoSlideImages();
   }
 
-  /**
-   * Preloads all images to avoid flickering.
-   */
-  private preloadImages() {
-    this.slides.forEach(slide => {
-      const img = new Image();
-      img.src = slide.banner.imageUrl;
-    });
+  selectImage(index: number): void {
+    this.selectedIndex = index;
   }
-
-  /**
-   * Sets the current slide index.
-   * @param index The slide index to display.
-   */
-  setCurrentSlideIndex(index: number) {
-    this.currentIndex = index;
-  }
-
-  /**
-   * Checks if the given index is the current slide index.
-   * @param index The index to check.
-   * @returns Whether the index matches the current slide index.
-   */
-  isCurrentSlideIndex(index: number): boolean {
-    return this.currentIndex === index;
-  }
-
-  /**
-   * Moves to the previous slide.
-   */
-  prevSlide() {
-    this.currentIndex = (this.currentIndex > 0) ? --this.currentIndex : this.slides.length - 1;
-  }
-
-  /**
-   * Moves to the next slide.
-   */
-  nextSlide() {
-    this.currentIndex = (this.currentIndex < this.slides.length - 1) ? ++this.currentIndex : 0;
-  }
-
-  ngOnChanges() {
-    this.generateSlides();
-    this.preloadImages();
+  autoSlideImages(): void {
+    setInterval(() => {
+      this.selectedIndex < this.images.length - 1
+        ? this.selectedIndex++
+        : (this.selectedIndex = 0);
+    }, 3000);
   }
 }

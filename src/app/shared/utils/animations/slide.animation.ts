@@ -1,31 +1,22 @@
 
-import { animate, group, query, style, transition, trigger } from '@angular/animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 
-export const slideAnimation = trigger('slideAnimation', [
-  transition(':increment', group([
-    query(':enter', [
-      style({
-        transform: 'translateX(100%)'
-      }),
-      animate('0.5s ease-out', style('*'))
-    ]),
-    query(':leave', [
-      animate('0.5s ease-out', style({
-        transform: 'translateX(-100%)'
-      }))
+export const slideAnimation = trigger('carousalAnimation', [
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate(
+          '300ms ease-in',
+          style({
+            transform: 'translateX(0%)',
+          })
+        ),
+      ]),
+      transition(':leave', [
+        animate(
+          '300ms ease-in',
+          style({
+            transform: 'translateX(-100%)',
+          })
+        ),
+      ]),
     ])
-  ])),
-  transition(':decrement', group([
-    query(':enter', [
-      style({
-        transform: 'translateX(-100%)'
-      }),
-      animate('0.5s ease-out', style('*'))
-    ]),
-    query(':leave', [
-      animate('0.5s ease-out', style({
-        transform: 'translateX(100%)'
-      }))
-    ])
-  ]))
-]);

@@ -3,6 +3,7 @@ import { Banner } from 'src/app/home/core/models/banner.model';
 import { Products } from 'src/app/home/core/models/products.model';
 import { BannerUseCase } from 'src/app/home/core/use-cases/banner.use-case';
 import { ProductsUseCase } from 'src/app/home/core/use-cases/products.use-case';
+import { CarruselImage } from 'src/app/shared/models/carrusel-mage.model';
 
 @Component({
   selector: 'app-home-page',
@@ -18,13 +19,18 @@ export class HomePageComponent implements OnInit {
               private bannerUseCase: BannerUseCase,
               private productsLimitUseCase:ProductsUseCase) {}
 
-  public banners: Banner[] = [];
+  public banners: CarruselImage[] = [];
   public productsLimit:Products[]=[];
 
   private getBanners() {
     this.bannerUseCase.findAll().subscribe({
       next: (response: Banner[]) => {
-        this.banners = response;
+        this.banners = response.map<CarruselImage>((banner: Banner) => {
+          return {
+            imageAlt: banner.name,
+            imageSrc: banner.imageUrl
+          }
+        })
       },
       error: (err) => {
         console.error('Error fetching posts:', err);
@@ -35,11 +41,7 @@ export class HomePageComponent implements OnInit {
   private getAllProductsLimit(){
      this.productsLimitUseCase.findAll().subscribe({
        next:(response:Products[])=>{
-           response.forEach((product:Products) => {
-              product.imageUrl= 'https://www.pngfind.com/pngs/m/464-4649522_sillas-antiguas-png-silla-png-transparent-png.png';
-              this.productsLimit.push(product);
-          });
-
+          this.productsLimit = response
        },
        error: (err) => {
         console.error('Error fetching posts:', err);

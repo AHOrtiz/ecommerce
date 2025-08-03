@@ -1,5 +1,5 @@
 
 export interface CarruselImage{
-  description:string,
-  image: string
+  imageSrc: string;
+  imageAlt: string;
 }
