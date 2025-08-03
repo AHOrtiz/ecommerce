@@ -1,7 +1,8 @@
 
 .container-products{
   display: flex;
-
+  margin-top: 20px;
+  overflow: auto;
 }
 .card-individual{
     margin-left: 15px;

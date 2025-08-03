@@ -1,23 +1,20 @@
-<div class="container slider">
-  <div [@slideAnimation]="currentIndex">
-    <ng-template ngFor [ngForOf]="slides" let-slide let-i="index">
-      <img class="slide slide-animation nonDraggableImage" *ngIf="isCurrentSlideIndex(i)" [src]="slide.banner.imageUrl"
-        [alt]="slide.description" (swiperight)="prevSlide()" (swipeleft)="nextSlide()">
-    </ng-template>
-  </div>
-
-  <button class="arrow prev" (click)="prevSlide()"></button>
-  <button class="arrow next" (click)="nextSlide()"></button>
-
-  <nav class="nav">
-    <div class="wrapper">
-      <ul class="dots">
-        <li class="dot" *ngFor="let slide of slides; let i = index">
-          <span [ngClass]="{'active': isCurrentSlideIndex(i)}" (click)="setCurrentSlideIndex(i)">
-            {{ slide.description }}
-          </span>
-        </li>
-      </ul>
+<div *ngIf="images && images.length > 0" class="carousel-container">
+  <ng-container *ngFor="let image of images; let i = index">
+    <div [style.overflow]="'hidden'">
+      <img
+        [src]="image.imageSrc"
+        [alt]="image.imageAlt"
+        [ngClass]="{ 'image-active': selectedIndex === i }"
+      />
     </div>
-  </nav>
+  </ng-container>
+
+  <div *ngIf="indicators" class="carousel-dot-container">
+    <span
+      *ngFor="let dot of images; let i = index"
+      class="dot"
+      [ngClass]="{ active: selectedIndex === i }"
+      (click)="selectImage(i)"
+    ></span>
+  </div>
 </div>
