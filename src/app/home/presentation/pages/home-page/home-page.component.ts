@@ -11,16 +11,26 @@ import { CarruselImage } from 'src/app/shared/models/carrusel-mage.model';
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent implements OnInit {
+  categorias = [
+    { nombre: 'hogar, muebles y jardín', icono: 'fa-solid fa-house' },
+    { nombre: 'computación', icono: 'fa-solid fa-computer' },
+    { nombre: 'juegos y juguetes', icono: 'fa-solid fa-gamepad' },
+    { nombre: 'deportes', icono: 'fa-solid fa-baseball' },
+    { nombre: 'electrodomésticos', icono: 'fa-solid fa-lightbulb' },
+    { nombre: 'ropa y accesorios', icono: 'fa-solid fa-person-half-dress' },
+  ];
+
   ngOnInit(): void {
     this.getBanners();
     this.getAllProductsLimit();
   }
   constructor(
-              private bannerUseCase: BannerUseCase,
-              private productsLimitUseCase:ProductsUseCase) {}
+    private bannerUseCase: BannerUseCase,
+    private productsLimitUseCase: ProductsUseCase
+  ) {}
 
   public banners: CarruselImage[] = [];
-  public productsLimit:Products[]=[];
+  public productsLimit: Products[] = [];
 
   private getBanners() {
     this.bannerUseCase.findAll().subscribe({
@@ -28,9 +38,9 @@ export class HomePageComponent implements OnInit {
         this.banners = response.map<CarruselImage>((banner: Banner) => {
           return {
             imageAlt: banner.name,
-            imageSrc: banner.imageUrl
-          }
-        })
+            imageSrc: banner.imageUrl,
+          };
+        });
       },
       error: (err) => {
         console.error('Error fetching posts:', err);
@@ -38,14 +48,17 @@ export class HomePageComponent implements OnInit {
     });
   }
 
-  private getAllProductsLimit(){
-     this.productsLimitUseCase.findAll().subscribe({
-       next:(response:Products[])=>{
-          this.productsLimit = response
-       },
-       error: (err) => {
+  private getAllProductsLimit() {
+    this.productsLimitUseCase.findAll().subscribe({
+      next: (response: Products[]) => {
+        this.productsLimit = response;
+      },
+      error: (err) => {
         console.error('Error fetching posts:', err);
       },
-     });
+    });
+  }
+  public onCategoryClick(nombre: string) {
+    console.log('Categoría clickeada:', nombre);
   }
 }

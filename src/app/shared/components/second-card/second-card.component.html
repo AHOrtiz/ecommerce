@@ -1,30 +1,20 @@
 <div class="card">
   <div class="header" (click)="OnclickCard()">
-    <div class="extra-options">
-      <shared-btn-descuentos
-        *ngIf="hasDiscount()"
-        [color_background]="'var(--secondary-color)'"
-        [label]="product.discount | toString">
-      </shared-btn-descuentos>
-      <i class="fa fa-heart fas"></i>
+    <div class="image-container">
+      <img [src]="product.imageUrl" [alt]="product.name">
     </div>
-  </div>
-
-  <div class="image-container">
-    <img [src]="product.imageUrl" [alt]="product.name">
   </div>
 
   <div class="footer">
+
     <div class="card-text">
       <label class="title">{{product.name | truncateText:[50, '...']}}</label>
+      <shared-app-raiting></shared-app-raiting>
       <label class="price">${{getPrice()}}</label>
     </div>
 
-    <shared-btn-circle
-      [color_background]="'var(--secondary-color)'"
-      [color_icon]="'var(--text-color-button)'"
-      [icon]="'fa-solid fa-cart-shopping'"
-      (onclick)="btnCarrito()">
-    </shared-btn-circle>
+    <div> <i class="fa fa-heart fas"></i></div>
+
+
   </div>
 </div>

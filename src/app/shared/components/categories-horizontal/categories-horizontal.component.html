@@ -1,0 +1,11 @@
+
+<div class="categories-container">
+  <div
+    class="category-card"
+    *ngFor="let cat of categorias"
+    (click)="btnClick(cat.nombre)"
+  >
+     <i [class]="cat.icono + ' category-icon'"></i>
+    <p class="category-text">{{ capitalize(cat.nombre) }}</p>
+  </div>
+</div>

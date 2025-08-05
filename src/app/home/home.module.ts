@@ -32,6 +32,7 @@ import { ProductsUseCaseImpl } from './data/use-cases/products.use-case.impl';
 import { ProductsRepository } from './core/repositories/products.repository';
 import { ProductsRepositoryImpl } from './data/repositories/products.repository.impl';
 import { CommonModule } from '@angular/common';
+import { CardProductDetailPageComponent } from './presentation/pages/card-product-detail-page/card-product-detail-page.component';
 
 
 
@@ -39,7 +40,8 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     LayoutPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    CardProductDetailPageComponent
   ],
   imports: [
     HomeRoutingModule,

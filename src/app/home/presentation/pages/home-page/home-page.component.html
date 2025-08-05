@@ -1,9 +1,13 @@
 <shared-navbar></shared-navbar>
 
+<div class="container-categories">
+  <shared-categories-horizontal [categorias]="categorias" (onclick)="onCategoryClick($event)">
+  </shared-categories-horizontal>
+</div>
+
 <shared-carrusel [images]="banners"></shared-carrusel>
 
 <div class="container-products">
-  <shared-second-card *ngFor="let item of productsLimit"  [product]="item" class="card-individual"></shared-second-card>
+  <shared-second-card *ngFor="let item of productsLimit" [product]="item" class="card-individual"></shared-second-card>
 </div>
-
 

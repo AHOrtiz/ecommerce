@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 40px;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+
+}
+
+.card-footer {
+  margin-top: 12px;
+}
+
+.footer-images {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-images img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Columna derecha */
+.container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.container-info-footer{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.buy-btn {
+  background:var(--secondary-color);
+  border: none;
+  padding: 16px 20px;
+  border-radius: 6px;
+  color: var(--background-color);
+  font-size: 18px;
+  cursor: pointer;
+  width: 40%;
+  margin-top: auto;
+  align-self: flex-end;
+
+}

@@ -7,3 +7,8 @@
 .card-individual{
     margin-left: 15px;
 }
+.container-categories{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

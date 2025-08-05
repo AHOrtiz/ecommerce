@@ -1,6 +1,6 @@
-import { Products } from 'src/app/home/core/models/products.model';
-import { Product } from './../../models/product.model';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Products } from 'src/app/home/core/models/products.model';
 
 @Component({
   selector: 'shared-second-card',
@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SecondCardComponent {
   @Input() product!: Products;
-
+  constructor(private router: Router) {}
   hasDiscount(): boolean {
     if (this.product.discount) {
       return true;
@@ -38,6 +38,6 @@ export class SecondCardComponent {
   }
 
   OnclickCard() {
-    console.log('click en tarjeta');
+       this.router.navigate(['inicio/detail-product']);
   }
 }
