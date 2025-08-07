@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-secondary-color);
 }
 
 .card .header {
@@ -18,34 +20,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
   align-items: center;
   border-radius: 1em;
   cursor: pointer;
-}
-
-.card .header .extra-options {
-  width: 100%;
-  display: flex;
-  flex-grow: .5;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card .header .extra-options shared-btn-descuentos {
-  padding-left: 15px;
-}
-
-.card .header .extra-options i {
-  padding-right: 15px;
 }
 
 .card .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  padding: 20px;
 }
 
 .card .image-container img {
@@ -65,7 +49,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin-left: 10px;
+  padding: 0 0 10px 10px;
 }
 
 .card .footer .card-text .title {
@@ -83,6 +67,7 @@
   display: flex;
   flex-direction:initial ;
   height: 100%;
+  padding: 0 10px 0 3px;
 }
 
 .container-raiting{

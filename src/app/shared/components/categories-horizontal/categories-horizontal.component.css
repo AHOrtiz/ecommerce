@@ -8,8 +8,8 @@
   justify-content: center;
   padding: 16px;
   border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-secondary-color);
   cursor: pointer;
   transition: transform 0.2s;
   width: 150px;
@@ -36,7 +36,8 @@
   -webkit-line-clamp: 2; /* Máximo 2 líneas */
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-weight: 500;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-text);
   flex-grow: 2;
   margin: 0;
 }

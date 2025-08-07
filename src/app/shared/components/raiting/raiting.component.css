@@ -1,5 +1,4 @@
 :host {
-  width: 90px;
   height: auto;
   display: block;
 }
@@ -10,7 +9,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--secondary-color);
+  color: var(--warning-color);
 }
 
 div span {

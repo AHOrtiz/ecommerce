@@ -10,6 +10,11 @@ import { Products } from 'src/app/home/core/models/products.model';
 export class SecondCardComponent {
   @Input() product!: Products;
   constructor(private router: Router) {}
+
+  get rating(): number {
+    return Number(this.product.rating);
+  }
+
   hasDiscount(): boolean {
     if (this.product.discount) {
       return true;

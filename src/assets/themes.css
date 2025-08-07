@@ -2,15 +2,35 @@
 
 /* Tema claro */
 :root {
-  --primary-color: #141B24;
-  --secondary-color: #FF9900;
-  --background-color: #fff;
-  --background-secondary-color: #FEBD69;
-  --text-color: #565959;
-  --text-color-ligth: #fff;
-  --text-color-button: #565959;
-  --text-color-red: #FF746C;
+/* Colores principales */
 
+  /* Orange */
+  --primary-orange-color: #FF9900;
+  --primary-orange-secondary-color: #febd69;
+
+  /* Imperial */
+  --primary-imperial-color: #232f3e;
+  --primary-imperial-secondary-color: #37475a;
+
+  /* Primary Blue */
+  --primary-blue-color: #18A0FB;
+
+  /* Primary Black */
+  --primary-black-color: #282828;
+
+  --white-color: #fafafa;           /* Fondo principal */
+  --gray-secondary-color: #ededed;  /* Fondo secundario */
+  --gray-third-color: #d0d0d0;      /* Fondo tercierio */
+
+  /* Texto */
+  --text-color: #565959;              /* Texto principal */
+  --text-color-light: #fff;           /* Texto claro */
+  --text-color-button: #565959;       /* Texto en botones */
+
+  /* Estados */
+  --success-color: #29d7a7;           /* Verde éxito */
+  --warning-color: #ffc107;           /* Amarillo advertencia */
+  --error-color: #f44336;             /* Rojo error */
 }
 
 /* Tema oscuro */
