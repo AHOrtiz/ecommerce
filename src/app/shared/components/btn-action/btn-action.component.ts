@@ -27,7 +27,7 @@ export class BtnActionComponent implements AfterViewChecked {
 
   @HostListener('mouseover')
   onMouseOver() {
-    this.containerElement!.nativeElement.style.backgroundColor = `var(--text-color-red)`;
+    this.containerElement!.nativeElement.style.backgroundColor = `var(--background-secondary-color)`;
     let width: number = this.containerElement!.nativeElement.offsetWidth
     this.containerElement!.nativeElement.style.width = `${width - 2}px`;
   }

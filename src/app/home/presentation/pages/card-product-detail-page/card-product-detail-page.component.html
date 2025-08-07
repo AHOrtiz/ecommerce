@@ -36,8 +36,10 @@
       de todos.</p>
     <p class="price">$ 00,00</p>
     <div class="container-info-footer">
-      <button class="buy-btn" (click)="OnclickBack()">Regresar</button>
-      <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+      <!-- <button class="buy-btn" (click)="OnclickBack()">Regresar</button>
+      <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i></button> -->
+      <shared-btn-action [color_background]="'var(--secondary-color)'" [text]="'Regresar'" [color_text]="'var(--background-color)'" ></shared-btn-action>
+      <shared-btn-action [color_background]="'var(--secondary-color)'" [text]="'Regresar'" [color_text]="'var(--background-color)'" (onclick)="OnclickBack()"></shared-btn-action>
     </div>
   </div>
 </div>

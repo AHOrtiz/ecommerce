@@ -33,7 +33,7 @@
 
 .card .container-extraoptions i {
   color: var(--text-color);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-text);
   background: var(--background-color);
   padding: 8px;
   border-radius: 50%;
@@ -64,7 +64,7 @@ img{
   color: var(--text-color-ligth);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-medium);
 }
 
 .card-body shared-btn-circle {

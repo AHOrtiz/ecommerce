@@ -17,8 +17,8 @@
 
 .header label {
   color: var(--text-color);
-  font-size: var(--font-size-large);
-  font-weight: var(--font-weight-thin);
+  font-size: var(--font-size-title-section-1);
+  font-weight: var(--font-weight-medium);
   padding: 15px;
 }
 
@@ -39,7 +39,7 @@
 .content .range {
   color: var(--text-color);
   font-size: 15px;
-  font-weight: var(--font-weight-thin);
+  font-weight: var(--font-weight-medium);
   margin-bottom: 5px;
 }
 

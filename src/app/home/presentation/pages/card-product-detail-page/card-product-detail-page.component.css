@@ -64,11 +64,11 @@ body {
   font-weight: bold;
 }
 
-.buy-btn {
+ .buy-btn   {
   background:var(--secondary-color);
   border: none;
   padding: 16px 20px;
-  border-radius: 6px;
+  border-radius: 12px;
   color: var(--background-color);
   font-size: 18px;
   cursor: pointer;
@@ -77,3 +77,20 @@ body {
   align-self: flex-end;
 
 }
+
+shared-btn-action{
+  background:var(--secondary-color);
+  border: none;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 40%;
+  margin-top: auto;
+  align-self: flex-end;
+  text-align: center;
+}
+
+ /* shared-btn-action{
+  width: 40%;
+} */

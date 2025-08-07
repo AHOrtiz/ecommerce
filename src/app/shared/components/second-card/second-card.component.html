@@ -9,11 +9,17 @@
 
     <div class="card-text">
       <label class="title">{{product.name | truncateText:[50, '...']}}</label>
-      <shared-app-raiting></shared-app-raiting>
-      <label class="price">${{getPrice()}}</label>
+      <div class="container-raiting">
+        <shared-app-raiting></shared-app-raiting>
+      </div>
+
+      <div >
+           <label class="price">${{getPrice()}}</label>
+      </div>
+
     </div>
 
-    <div> <i class="fa fa-heart fas"></i></div>
+    <div class="container-isFavorite"> <i class="fa fa-heart fas"></i></div>
 
 
   </div>

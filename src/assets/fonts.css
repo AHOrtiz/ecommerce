@@ -1,14 +1,19 @@
 /* styles.css */
 
 /* *TIPOGRAFIA */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-  --font-family-base: 'Roboto', sans-serif;
-  --font-size-base: 16px;
-  --font-size-large: 24px;
-  --font-size-small: 12px;
-  --font-weight-thin: 100;
-  --font-weight-normal: 400;
+  --font-family-base: "Montserrat", sans-serif;
+  --font-size-title-1 : 46px;
+  --font-size-title-2 : 33px;
+  --font-size-title-3 : 28px;
+  --font-size-title-section-1  : 18px;
+  --font-size-title-section-2  : 16px;
+  --font-size-paragraph:16px;
+  --font-size-text: 12px;
   --font-weight-bold: 700;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 400;
+  --font-weight-regular: 400;
 }

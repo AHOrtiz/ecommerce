@@ -10,12 +10,12 @@ export interface Category {
   styleUrls: ['./categories-horizontal.component.css'],
 })
 export class CategoriesHorizontalComponent {
-  @Input() categorias: Category[] = [];
+  @Input() category!: Category ;
 
   @Output() onclick = new EventEmitter<string>();
 
-  btnClick(nombre: string) {
-    this.onclick.emit(nombre);
+  btnClick() {
+    this.onclick.emit(this.category.nombre);
   }
     capitalize(texto: string) {
     return texto.charAt(0).toUpperCase() + texto.slice(1);
