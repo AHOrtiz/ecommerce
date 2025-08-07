@@ -1,8 +1,28 @@
+.container-title-with-scroll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container-title-with-scroll .container-scroll-products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-section {
+  flex-grow: 1;
+  font-size: var(--font-size-subtitle-1);
+  font-weight: var(--font-weight-bold);
+}
 
 .container-products{
   display: flex;
   overflow: auto;
   padding: 25px;
+  scroll-behavior: smooth; /* Animación suave al hacer scroll */
 }
 
 .container-products shared-second-card {

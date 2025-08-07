@@ -16,7 +16,7 @@ export class PrimaryWithIconComponent implements OnInit {
   // Outputs
   @Output() click = new EventEmitter<void>();
 
-  // Private properties
+  // ViewChild properties
   @ViewChild('container', { static: true }) containerElement?: ElementRef<HTMLDivElement>;
 
   // Listeners
@@ -46,7 +46,7 @@ export class PrimaryWithIconComponent implements OnInit {
       this.containerElement!.nativeElement.style.cursor = 'no-drop';
     } else {
       this.containerElement!.nativeElement.style.backgroundColor = 'var(--primary-orange-color)';
-      this.containerElement!.nativeElement.style.color = 'var(--white-color)';
+      this.containerElement!.nativeElement.style.color = 'var(--background-color)';
       this.containerElement!.nativeElement.style.cursor = 'pointer';
     }
   }

@@ -1,30 +1,51 @@
-<shared-navbar></shared-navbar>
-
-<label>normal</label>
-<shared-btn-primary [text]="'Confirmar'" [type]="'normal'"></shared-btn-primary>
-<label>form</label>
-<shared-btn-primary [text]="'Usar dirección actual'" [type]="'form'"></shared-btn-primary>
-<label>link</label>
-<shared-btn-primary [text]="'Agregar nueva dirección de envío'" [type]="'link'"></shared-btn-primary>
-<label>card</label>
-<shared-btn-primary [text]="'Productos en carrito'" [type]="'card'"></shared-btn-primary>
-
-<div class="container-categories">
-  <shared-categories-horizontal *ngFor="let category of categorias" [category]="category"
-    (onclick)="onCategoryClick($event)">
-  </shared-categories-horizontal>
-</div>
-
-<shared-carrusel [images]="banners"></shared-carrusel>
-
-<div class="container-products">
-  <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
-  <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
-  <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
-  <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
-</div>
+<!-- Listado horizontal de categorias disponibles -->
+<ng-container *ngTemplateOutlet="categoriesTemplate"></ng-container>
+<!-- Carrusel de banners -->
+<ng-container *ngTemplateOutlet="carruselTemplate"></ng-container>
+<!-- Carrusel de productos disponibles -->
+<ng-container *ngTemplateOutlet="productsTemplate"></ng-container>
 
 <br>
 <br>
 <br>
 <br>
+
+
+<!-- Templates -->
+
+<ng-template #categoriesTemplate>
+  <div class="container-categories">
+    <shared-categories-horizontal
+      *ngFor="let category of categorias"
+      [category]="category"
+      (onclick)="onCategoryClick($event)">
+    </shared-categories-horizontal>
+  </div>
+</ng-template>
+
+<ng-template #carruselTemplate>
+  <shared-carrusel [images]="banners"></shared-carrusel>
+</ng-template>
+
+<ng-template #productsTemplate>
+  <div class="container-title-with-scroll">
+    <label for="section-products" class="title-section">Productos en tendencia</label>
+    <div class="container-scroll-products">
+      <shared-btn-circle
+        [color_background]="'clear'"
+        [color_icon]="'var(--primary-imperial-color)'"
+        [icon]="'fa-solid fa-angle-left'"
+        (onclick)="btnScrollLeft()">
+      </shared-btn-circle>
+      <shared-btn-circle
+        [color_background]="'clear'"
+        [color_icon]="'var(--primary-imperial-color)'"
+        [icon]="'fa-solid fa-angle-right'"
+        (onclick)="btnScrollRight()">
+      </shared-btn-circle>
+    </div>
+  </div>
+  <div #productsOutlet class="container-products">
+    <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
+  </div>
+</ng-template>

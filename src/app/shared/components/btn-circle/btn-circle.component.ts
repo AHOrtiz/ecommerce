@@ -11,7 +11,7 @@ export class BtnCircleComponent implements OnInit {
   @Input()  icon: string = '';
   @Input()  color_icon: string = '';
 
-  @Output() onclick = new EventEmitter<boolean>();
+  @Output() onclick = new EventEmitter<void>();
 
   @ViewChild('container',{static:true}) containerElement?: ElementRef<HTMLDivElement>;
 
@@ -21,6 +21,6 @@ export class BtnCircleComponent implements OnInit {
  }
 
   btnClick(){
-    this.onclick.emit(true);
+    this.onclick.emit();
   }
 }
