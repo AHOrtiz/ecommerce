@@ -5,15 +5,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --font-family-base: "Montserrat", sans-serif;
-  --font-size-title-1 : 46px;
-  --font-size-title-2 : 33px;
-  --font-size-title-3 : 28px;
-  --font-size-title-section-1  : 18px;
-  --font-size-title-section-2  : 16px;
-  --font-size-paragraph:16px;
-  --font-size-text: 12px;
-  --font-weight-bold: 700;
-  --font-weight-medium: 400;
-  --font-weight-semibold: 400;
+  /* Size */
+  --font-size-display: 56px;
+  --font-size-title-1: 46px;
+  --font-size-title-2: 33px;
+  --font-size-title-3: 28px;
+  --font-size-subtitle-1: 22px;
+  --font-size-subtitle-2: 18px;
+  --font-size-paragraph: 16px;
+  --font-size-text: 14px;
+  --font-size-caption: 12px;
+  /* Weight */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
 }

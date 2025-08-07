@@ -1,17 +1,31 @@
 
 .container-products{
   display: flex;
-  margin-top: 20px;
   overflow: auto;
-}
-.card-individual{
-    margin-left: 15px;
-}
-.container-categories{
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding: 10px;
+  padding: 25px;
 }
 
+.container-products shared-second-card {
+  margin-right: 16px;
+}
+
+.container-categories{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 14px 20px;
+}
+
+.container-products,
+.container-categories {
+  /* Oculta la barra de scroll en navegadores Webkit */
+  scrollbar-width: none; /* Firefox */
+}
+
+.container-products::-webkit-scrollbar,
+.container-categories::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 

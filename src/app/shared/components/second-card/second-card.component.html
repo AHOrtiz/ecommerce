@@ -10,7 +10,7 @@
     <div class="card-text">
       <label class="title">{{product.name | truncateText:[50, '...']}}</label>
       <div class="container-raiting">
-        <shared-app-raiting></shared-app-raiting>
+        <shared-app-raiting [stars]="rating"></shared-app-raiting>
       </div>
 
       <div >

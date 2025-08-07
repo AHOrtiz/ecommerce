@@ -1,8 +1,8 @@
 :host {
   width: 100%;
   height: auto;
-  background-color: var(--primary-color);
-  color: var(--text-color-ligth);
+  background-color: var(--primary-imperial-color);
+  color: var(--white-color);
   display: block;
 }
 
@@ -20,7 +20,7 @@ header {
 }
 
 .logo span {
-  color: var(--secondary-color);
+  color: var(--primary-orange-color);
 }
 
 /* Navegación */
@@ -36,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-orange-color);
   cursor: pointer;
 }
 
@@ -49,7 +49,7 @@ nav a:hover {
 }
 
 .menu-icons a:hover, i:hover {
-  color: var(--secondary-color);
+  color: var(--primary-orange-color);
   transition: color 0.3s;
   cursor: pointer;
 }
