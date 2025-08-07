@@ -1,5 +1,14 @@
 <shared-navbar></shared-navbar>
 
+<label>normal</label>
+<shared-btn-primary [text]="'Confirmar'" [type]="'normal'"></shared-btn-primary>
+<label>form</label>
+<shared-btn-primary [text]="'Usar dirección actual'" [type]="'form'"></shared-btn-primary>
+<label>link</label>
+<shared-btn-primary [text]="'Agregar nueva dirección de envío'" [type]="'link'"></shared-btn-primary>
+<label>card</label>
+<shared-btn-primary [text]="'Productos en carrito'" [type]="'card'"></shared-btn-primary>
+
 <div class="container-categories">
   <shared-categories-horizontal *ngFor="let category of categorias" [category]="category"
     (onclick)="onCategoryClick($event)">
@@ -9,6 +18,9 @@
 <shared-carrusel [images]="banners"></shared-carrusel>
 
 <div class="container-products">
+  <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
+  <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
+  <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
   <shared-second-card *ngFor="let item of productsLimit" [product]="item"></shared-second-card>
 </div>
 

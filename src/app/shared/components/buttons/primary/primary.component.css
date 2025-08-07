@@ -1,0 +1,14 @@
+:host {
+  width: fit-content;
+  display: flex;
+  user-select: none;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-weight: var(--font-weight-regular);
+  user-select: none;
+}
