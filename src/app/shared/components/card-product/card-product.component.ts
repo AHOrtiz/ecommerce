@@ -9,7 +9,7 @@ export class CardProductComponent {
   @Input() titulo: string = '';
   @Input() precio: number = 0 ;
 
-  btnCarrito(event:boolean){
+  btnCarrito(){
     alert('Holaaaaaaa');
     console.log('entroo')
   }

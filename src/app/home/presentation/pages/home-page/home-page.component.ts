@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Banner } from 'src/app/home/core/models/banner.model';
 import { Products } from 'src/app/home/core/models/products.model';
 import { BannerUseCase } from 'src/app/home/core/use-cases/banner.use-case';
@@ -11,7 +11,15 @@ import { CarruselImage } from 'src/app/shared/models/carrusel-mage.model';
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent implements OnInit {
-  categorias = [
+
+  constructor(
+    private bannerUseCase: BannerUseCase,
+    private productsLimitUseCase: ProductsUseCase
+  ) {}
+
+  // Public properties
+
+  public categorias = [
     { nombre: 'hogar, muebles y jardín', icono: 'fa-solid fa-house' },
     { nombre: 'computación', icono: 'fa-solid fa-computer' },
     { nombre: 'juegos y juguetes', icono: 'fa-solid fa-gamepad' },
@@ -19,18 +27,38 @@ export class HomePageComponent implements OnInit {
     { nombre: 'electrodomésticos', icono: 'fa-solid fa-lightbulb' },
     { nombre: 'ropa y accesorios', icono: 'fa-solid fa-person-half-dress' },
   ];
+  public banners: CarruselImage[] = [];
+  public productsLimit: Products[] = [];
+
+  // ViewChild properties
+  @ViewChild('productsOutlet', { read: ElementRef }) productsOutletRef?: ElementRef;
+
+  // Lifecycle
 
   ngOnInit(): void {
     this.getBanners();
     this.getAllProductsLimit();
   }
-  constructor(
-    private bannerUseCase: BannerUseCase,
-    private productsLimitUseCase: ProductsUseCase
-  ) {}
 
-  public banners: CarruselImage[] = [];
-  public productsLimit: Products[] = [];
+  // Public methods
+
+  public btnScrollLeft() {
+    if (this.productsOutletRef) {
+      this.productsOutletRef.nativeElement.scrollLeft -= 300;
+    }
+  }
+
+  public btnScrollRight() {
+    if (this.productsOutletRef) {
+      this.productsOutletRef.nativeElement.scrollLeft += 300;
+    }
+  }
+
+  public onCategoryClick(nombre: string) {
+    console.log('Categoría clickeada:', nombre);
+  }
+
+  // Private methods
 
   private getBanners() {
     this.bannerUseCase.findAll().subscribe({
@@ -57,8 +85,5 @@ export class HomePageComponent implements OnInit {
         console.error('Error fetching posts:', err);
       },
     });
-  }
-  public onCategoryClick(nombre: string) {
-    console.log('Categoría clickeada:', nombre);
   }
 }

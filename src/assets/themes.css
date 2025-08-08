@@ -18,7 +18,8 @@
   /* Primary Black */
   --primary-black-color: #282828;
 
-  --white-color: #fafafa;           /* Fondo principal */
+  --background-color: #fafafa;      /* Fondo principal */
+  --white-color: #ffffff;      /* Fondo principal */
   --gray-secondary-color: #ededed;  /* Fondo secundario */
   --gray-third-color: #d0d0d0;      /* Fondo tercierio */
 

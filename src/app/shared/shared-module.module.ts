@@ -22,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { TruncateTextPipe } from './utils/pipes/truncate-text.pipe';
 import { CategoriesHorizontalComponent } from './components/categories-horizontal/categories-horizontal.component';
+import { PrimaryComponent } from './components/buttons/primary/primary.component';
+import { PrimaryWithIconComponent } from './components/buttons/primary-with-icon/primary-with-icon.component';
 
 
 
@@ -43,14 +45,13 @@ import { CategoriesHorizontalComponent } from './components/categories-horizonta
     Error404PageComponent,
     MultipliMenuComponent,
     CategoriesHorizontalComponent,
+    // Butons
+    PrimaryComponent,
+    PrimaryWithIconComponent,
     // Pipes
     ToStringPipe,
     CarruselComponent,
     TruncateTextPipe,
-
-
-
-
   ],
   imports: [
  CommonModule
@@ -74,6 +75,8 @@ import { CategoriesHorizontalComponent } from './components/categories-horizonta
     MultipliMenuComponent,
     CarruselComponent,
     CategoriesHorizontalComponent,
+    PrimaryComponent,
+    PrimaryWithIconComponent,
   ]
 })
 export class SharedModule { }

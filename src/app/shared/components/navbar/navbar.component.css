@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   background-color: var(--primary-imperial-color);
-  color: var(--white-color);
+  color: var(--background-color);
   display: block;
 }
 

@@ -1,0 +1,19 @@
+:host {
+  width: fit-content;
+  height: 42px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container-button {
+  padding: 10px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background-color);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--primary-orange-color);
+  user-select: none;
+}
