@@ -24,6 +24,7 @@ import { TruncateTextPipe } from './utils/pipes/truncate-text.pipe';
 import { CategoriesHorizontalComponent } from './components/categories-horizontal/categories-horizontal.component';
 import { PrimaryComponent } from './components/buttons/primary/primary.component';
 import { PrimaryWithIconComponent } from './components/buttons/primary-with-icon/primary-with-icon.component';
+import { FullscreenLoaderComponent } from './components/fullscreen-loader/fullscreen-loader.component';
 
 
 
@@ -45,6 +46,7 @@ import { PrimaryWithIconComponent } from './components/buttons/primary-with-icon
     Error404PageComponent,
     MultipliMenuComponent,
     CategoriesHorizontalComponent,
+    FullscreenLoaderComponent,
     // Butons
     PrimaryComponent,
     PrimaryWithIconComponent,
@@ -52,6 +54,7 @@ import { PrimaryWithIconComponent } from './components/buttons/primary-with-icon
     ToStringPipe,
     CarruselComponent,
     TruncateTextPipe,
+
   ],
   imports: [
  CommonModule
@@ -77,6 +80,7 @@ import { PrimaryWithIconComponent } from './components/buttons/primary-with-icon
     CategoriesHorizontalComponent,
     PrimaryComponent,
     PrimaryWithIconComponent,
+    FullscreenLoaderComponent
   ]
 })
 export class SharedModule { }
