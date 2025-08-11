@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoaderService } from 'src/app/shared/utils/services/loader.service';
+import { MenuUserModalService } from 'src/app/shared/utils/services/modal-navbar.servide';
 
 @Component({
   selector: 'app-layout-page',
@@ -11,7 +12,10 @@ export class LayoutPageComponent {
    * Inyecta el servicio LoaderService para controlar el loader global.
    * @param loaderService Servicio para mostrar/ocultar el loader.
    */
-  constructor(private loaderService: LoaderService) { }
+  constructor(
+    private loaderService: LoaderService,
+    public menuUserModal: MenuUserModalService
+  ) { }
 
   // Public property
 
@@ -19,4 +23,8 @@ export class LayoutPageComponent {
   * Observable que expone el estado de carga global.
   */
   public loading$ = this.loaderService.loading$;
+  /**
+  * Mostrar modal de menu de Usuario.
+  */
+  public showMenuUser$ = this.menuUserModal.visibleMenuUser$;
 }

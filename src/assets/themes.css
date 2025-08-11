@@ -27,6 +27,9 @@
   --text-color: #565959;              /* Texto principal */
   --text-color-light: #fff;           /* Texto claro */
   --text-color-button: #565959;       /* Texto en botones */
+  --text-disabled-color: #9D9D9D;     /* Texto deshabilitado */
+
+  --separetor-color: #E5E5E5;         /* Color del separador */
 
   /* Estados */
   --success-color: #29d7a7;           /* Verde éxito */

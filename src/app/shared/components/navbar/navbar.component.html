@@ -7,9 +7,16 @@
   </nav>
 
   <div class="menu-icons">
-    <a routerLink="/search"><i class="fa-solid fa-user"></i></a>
+    <!-- User -->
+    <a #iconUser
+      (mouseenter)="onUserHover(true)"
+      (mouseleave)="onUserHover(false)">
+        <i class="fa-solid fa-user"></i>
+    </a>
+    <!-- Mensajes -->
     <a routerLink="/wishlist"><i class="fa-solid fa-cart-plus"></i></a>
-    <i (click)="toggleTheme()" class="fa-solid fa-moon"></i>
+    <!-- Cerrar sesion -->
+    <i class="fa-solid fa-moon"></i>
   </div>
 </header>
 

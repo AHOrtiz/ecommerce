@@ -25,6 +25,7 @@ import { CategoriesHorizontalComponent } from './components/categories-horizonta
 import { PrimaryComponent } from './components/buttons/primary/primary.component';
 import { PrimaryWithIconComponent } from './components/buttons/primary-with-icon/primary-with-icon.component';
 import { FullscreenLoaderComponent } from './components/fullscreen-loader/fullscreen-loader.component';
+import { MenuUserComponent } from './components/menu-user/menu-user.component';
 
 
 
@@ -50,10 +51,13 @@ import { FullscreenLoaderComponent } from './components/fullscreen-loader/fullsc
     // Butons
     PrimaryComponent,
     PrimaryWithIconComponent,
+    // Modals
+    MenuUserComponent,
     // Pipes
     ToStringPipe,
     CarruselComponent,
     TruncateTextPipe,
+
 
   ],
   imports: [
@@ -80,7 +84,8 @@ import { FullscreenLoaderComponent } from './components/fullscreen-loader/fullsc
     CategoriesHorizontalComponent,
     PrimaryComponent,
     PrimaryWithIconComponent,
-    FullscreenLoaderComponent
+    FullscreenLoaderComponent,
+    MenuUserComponent,
   ]
 })
 export class SharedModule { }
