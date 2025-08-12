@@ -1,23 +1,111 @@
-<div class="background-circles"></div>
-
-<div class="main-login">
-  <div class="main-card">
-    <div class="background-shape">
-        <h1>Welcome back</h1>
+<!-- login.component.html -->
+<div class="login-container">
+  <!-- Lado izquierdo - Formulario -->
+  <div class="login-form-section">
+    <div class="amazon-logo">
+      <!-- <img src="/assets/imgs/logo.png" alt="Amazon" class="logo-img"> -->
     </div>
 
-    <label for="">Welcome back! Please enter your details</label>
-    <form (ngSubmit)="onLogin()">
-      <label for="email">Email:</label>
-      <input id="email" [(ngModel)]="email" name="email" required type="text">
+    <div class="form-container">
+      <h2 class="form-title">Iniciar sesión</h2>
 
-      <label for="password">Password:</label>
-      <input id="password" [(ngModel)]="password" name="password" required type="text">
+      <form (ngSubmit)="onLogin()" class="login-form">
+        <!-- Campo Usuario -->
+        <div class="form-group">
+          <label for="email" class="form-label">Email:</label>
+          <input id="email" [(ngModel)]="email" name="email" required type="email" class="form-input">
 
-      <button type="submit">Login</button>
-      <button type="submit" class="btn-google">Sign in with Google</button>
-    </form>
-    <label for="">Don´t have an account? <strong><a routerLink="/auth/register">Sign up for free</a></strong></label>
+        </div>
+
+        <!-- Campo Contraseña -->
+        <div class="form-group">
+
+           <label for="password" class="form-label">Password:</label>
+           <input id="password" [(ngModel)]="password" name="password" required type="text" class="form-input">
+
+        </div>
+
+        <!-- Checkbox Recordar información -->
+        <div class="form-group checkbox-group">
+          <input
+            type="checkbox"
+            id="recordar"
+            class="form-checkbox"
+          >
+          <label for="recordar" class="checkbox-label">Recordar mi información</label>
+        </div>
+
+        <!-- Enlace ¿Olvidaste tu contraseña? -->
+        <div class="forgot-password">
+          <a href="#"  class="forgot-link">
+            ¿Olvidaste tu contraseña?
+          </a>
+        </div>
+
+        <!-- Botón Ingresar -->
+        <button
+          type="submit"
+          class="btn-submit">
+          Ingresar
+        </button>
+      </form>
+
+      <!-- Separador OR -->
+      <div class="separator">
+        <span class="separator-text">O</span>
+      </div>
+
+      <!-- Botón Google -->
+      <button type="button" class="btn-google">
+        <img src="assets/google-icon.png" alt="Google" class="google-icon">
+        Ingresar con Google
+      </button>
+
+      <!-- Enlace registro -->
+      <div class="register-link">
+        <span>¿Aún no tienes una cuenta? </span>
+        <a href="#" class="register-anchor">Regístrate aquí</a>
+      </div>
+    </div>
   </div>
 
+  <!-- Lado derecho - Ilustración -->
+  <div class="illustration-section">
+    <div class="warehouse-illustration">
+      <!-- Aquí puedes agregar la ilustración del almacén -->
+      <div class="warehouse-content">
+        <div class="warehouse-shelves">
+          <div class="shelf shelf-1">
+            <div class="boxes">
+              <div class="box amazon-box"></div>
+              <div class="box amazon-box"></div>
+              <div class="box amazon-box"></div>
+            </div>
+          </div>
+          <div class="shelf shelf-2">
+            <div class="boxes">
+              <div class="box amazon-box"></div>
+              <div class="box amazon-box"></div>
+            </div>
+          </div>
+        </div>
+        <div class="workers">
+          <div class="worker worker-1">
+            <div class="worker-body"></div>
+          </div>
+          <div class="worker worker-2">
+            <div class="worker-body"></div>
+          </div>
+        </div>
+        <div class="conveyor-belt"></div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+

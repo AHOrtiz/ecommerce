@@ -7,6 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `npm start` for a dev server and initialise database. 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Back-End repository
+  Run
+``https://github.com/AHOrtiz/Amazon---Nest``
+
 ## DataBase
 
 - `http://localhost:3000/users`   

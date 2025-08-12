@@ -1,4 +1,4 @@
-<shared-navbar></shared-navbar>
+
 
 <div class="container-main">
 
@@ -38,8 +38,10 @@
     <div class="container-info-footer">
       <!-- <button class="buy-btn" (click)="OnclickBack()">Regresar</button>
       <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i></button> -->
-      <shared-btn-action [color_background]="'var(--secondary-color)'" [text]="'Regresar'" [color_text]="'var(--background-color)'" ></shared-btn-action>
-      <shared-btn-action [color_background]="'var(--secondary-color)'" [text]="'Regresar'" [color_text]="'var(--background-color)'" (onclick)="OnclickBack()"></shared-btn-action>
+      <!-- <shared-btn-action [color_background]="'var(--secondary-color)'" [text]="'Regresar'" [color_text]="'var(--background-color)'" ></shared-btn-action>
+      <shared-btn-action [color_background]="'var(--secondary-color)'" [text]="'Regresar'" [color_text]="'var(--background-color)'" (onclick)="OnclickBack()"></shared-btn-action> -->
+      <shared-btn-primary [text]="'Regresar'" (click)="OnclickBack()" [type]="'card'"></shared-btn-primary>
+      <shared-btn-primary-with-icon [icon]="'fa-solid fa-cart-shopping'"></shared-btn-primary-with-icon>
     </div>
   </div>
 </div>

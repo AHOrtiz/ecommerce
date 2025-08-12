@@ -1,145 +1,380 @@
-.background-circles {
-  z-index: 1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image:
-        radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 20) 30px, transparent 0),
-        radial-gradient(circle at 80% 30%, rgba(0, 0, 0, .15) 50px, transparent 0),
-        radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.12) 70px, transparent 0),
-        radial-gradient(circle at 70% 70%, rgba(0, 0, 0, 0.08) 40px, transparent 0),
-        radial-gradient(circle at 30% 60%, rgba(0, 0, 0, 0.1) 20px, transparent 0),
-        radial-gradient(circle at 90% 90%, rgba(0, 0, 0, 20) 60px, transparent 0),
-        radial-gradient(circle at 10% 80%, rgba(0, 0, 0, 20) 35px, transparent 0);
-  background-repeat: no-repeat;
-  background-size: cover;
+/* login.component.css */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Amazon Ember', Arial, sans-serif;
 }
 
-/* Estilo del login */
-.main-login {
-  height: 100vh;
+/* Lado izquierdo - Formulario */
+.login-form-section {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
-  position: relative;
+  padding: 2rem;
+  background-color: #ffffff;
+  max-width: 500px;
 }
 
-.main-card {
-  background-color: white;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 90%;
+.amazon-logo {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 16em;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Si no tienes la imagen, puedes usar este estilo de texto */
+
+
+
+
+.form-container {
+  width: 100%;
   max-width: 400px;
 }
 
-form {
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #0f1111;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.login-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-  padding: 12px 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border 0.3s ease;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-input:focus {
-  border-color: var(--primary-color, #007bff);
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f1111;
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background-color: #ffffff;
+}
+
+.form-input:focus {
   outline: none;
+  border-color: #e77600;
+  box-shadow: 0 0 0 2px rgba(231, 118, 0, 0.2);
 }
 
-button {
-  border: none;
-  border-radius: 8px;
-  height: 44px;
-  background-color: var(--primary-color, #007bff);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
+.form-input.error {
+  border-color: #d13212;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: #d13212;
+  margin-top: 0.25rem;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.form-checkbox {
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.checkbox-label {
+  font-size: 0.875rem;
+  color: #0f1111;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin: 0;
 }
 
-button:hover {
-  background-color: #0056b3;
+.forgot-password {
+  text-align: right;
+  margin: 0.5rem 0;
+}
+
+.forgot-link {
+  font-size: 0.875rem;
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  background-color: #ff9900;
+  color: #0f1111;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover:not(.disabled) {
+  background-color: #fa8900;
+}
+
+.btn-submit.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #d5d9d9;
+}
+
+.separator-text {
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  color: #565959;
+  background-color: white;
 }
 
 .btn-google {
-  background-color: #ffffff;
-  color: #000;
-  border: 1px solid #ccc;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-weight: 500;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #0f1111;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn-google:hover {
-  background-color: #f1f1f1;
+  background-color: #f7f7f7;
+  border-color: #c7c7c7;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* :host{
-  width: 50%;
+.google-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.main-login{
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #565959;
+}
 
+.register-anchor {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.register-anchor:hover {
+  text-decoration: underline;
+}
+
+/* Lado derecho - Ilustración */
+.illustration-section {
+  flex: 1.2;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e8eef5 100%);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
-.main-card{
-  border: 1px solid black;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-}
-form{
-  display: flex;
-  flex-direction: column;
-   padding:10px
-}
-input[type=text]{
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 
+.warehouse-illustration {
+  width: 80%;
+  height: 80%;
+  position: relative;
 }
-button{
-  border-radius: 7px;
-  height: 40px;
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  width: 120%;
+
+.warehouse-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.btn-google{
-  margin: 2px;
-  background-color: var(--background-color);
-  color: var(--primary-color);
+
+/* Estanterías */
+.warehouse-shelves {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  top: 10%;
+}
+
+.shelf {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: #8e9aaf;
+  border-radius: 4px;
+}
+
+.shelf-1 {
+  top: 0;
+  right: 20%;
+  transform: perspective(400px) rotateY(-15deg);
+}
+
+.shelf-2 {
+  top: 100px;
+  right: 40%;
+  transform: perspective(400px) rotateY(-15deg);
+}
+
+/* Cajas de Amazon */
+.boxes {
+  position: absolute;
+  top: -30px;
+  display: flex;
+  gap: 5px;
+  left: 10px;
+}
+
+.amazon-box {
+  width: 35px;
+  height: 30px;
+  background-color: #ff9900;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.amazon-box::before {
+  content: 'a';
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Trabajadores */
+.workers {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+}
+
+.worker {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+}
+
+.worker-1 {
+  left: 30%;
+  bottom: 0;
+}
+
+.worker-2 {
+  right: 20%;
+  bottom: 0;
+}
+
+.worker-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+    #4a5568 0%, #4a5568 40%,
+    #ff9900 40%, #ff9900 70%,
+    #2d3748 70%, #2d3748 100%);
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+  position: relative;
+}
+
+/* Cinta transportadora */
+.conveyor-belt {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
   height: 40px;
-} */
+  background: linear-gradient(to right, #4a5568, #718096, #4a5568);
+  border-radius: 20px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.conveyor-belt::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #e2e8f0 0px,
+    #e2e8f0 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  animation: conveyor 2s linear infinite;
+}
+
+@keyframes conveyor {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-form-section {
+    max-width: none;
+    padding: 1rem;
+  }
+
+  .illustration-section {
+    min-height: 300px;
+    order: -1;
+  }
+
+  .warehouse-illustration {
+    width: 100%;
+    height: 200px;
+  }
+}

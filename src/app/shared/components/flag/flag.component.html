@@ -1,0 +1,9 @@
+<div class="badges-container">
+  <div class="badge" *ngFor="let badge of badges">
+    <div class="icon">{{ badge.icon }}</div>
+    <div class="text">
+      <span>{{ badge.textTop }}</span>
+      <span *ngIf="badge.textBottom">{{ badge.textBottom }}</span>
+    </div>
+  </div>
+</div>

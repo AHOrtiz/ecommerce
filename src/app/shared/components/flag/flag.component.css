@@ -1,0 +1,26 @@
+.badges-container {
+  display: flex;
+  gap: 10px;
+}
+
+.badge {
+  background-color: #c7b273; /* Color dorado */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 80px;
+  font-weight: bold;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.text span {
+  font-size: 12px;
+  line-height: 1;
+}

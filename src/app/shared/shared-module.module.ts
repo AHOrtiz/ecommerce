@@ -26,6 +26,12 @@ import { PrimaryComponent } from './components/buttons/primary/primary.component
 import { PrimaryWithIconComponent } from './components/buttons/primary-with-icon/primary-with-icon.component';
 import { FullscreenLoaderComponent } from './components/fullscreen-loader/fullscreen-loader.component';
 import { MenuUserComponent } from './components/menu-user/menu-user.component';
+import { CalculateDiscountPipe } from './utils/pipes/calculate-discount.pipe';
+import { ImagesProductComponent } from './components/images-product/images-product.component';
+import { FlagComponent } from './components/flag/flag.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -48,6 +54,9 @@ import { MenuUserComponent } from './components/menu-user/menu-user.component';
     MultipliMenuComponent,
     CategoriesHorizontalComponent,
     FullscreenLoaderComponent,
+    ImagesProductComponent,
+    FlagComponent,
+    FooterComponent,
     // Butons
     PrimaryComponent,
     PrimaryWithIconComponent,
@@ -57,11 +66,13 @@ import { MenuUserComponent } from './components/menu-user/menu-user.component';
     ToStringPipe,
     CarruselComponent,
     TruncateTextPipe,
+    ProductCardComponent,
 
 
   ],
   imports: [
- CommonModule
+ CommonModule,
+ FormsModule
 
   ],
   exports:[
@@ -85,7 +96,10 @@ import { MenuUserComponent } from './components/menu-user/menu-user.component';
     PrimaryComponent,
     PrimaryWithIconComponent,
     FullscreenLoaderComponent,
+    FooterComponent,
     MenuUserComponent,
+    FlagComponent,
+    ProductCardComponent
   ]
 })
 export class SharedModule { }

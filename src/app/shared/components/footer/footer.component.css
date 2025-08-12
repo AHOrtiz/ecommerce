@@ -1,0 +1,33 @@
+:host{
+  width: 100%;
+   
+
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  width: 4em;
+}
+
+.logo span {
+  color: var(--primary-orange-color);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-size: 11px;
+
+
+}
+.copy-right{
+   font-size: 11px;
+}

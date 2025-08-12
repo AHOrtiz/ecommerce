@@ -33,6 +33,7 @@ import { ProductsRepository } from './core/repositories/products.repository';
 import { ProductsRepositoryImpl } from './data/repositories/products.repository.impl';
 import { CommonModule } from '@angular/common';
 import { CardProductDetailPageComponent } from './presentation/pages/card-product-detail-page/card-product-detail-page.component';
+import { SearchPageComponent } from './presentation/pages/search-page/search-page.component';
 
 
 
@@ -41,7 +42,8 @@ import { CardProductDetailPageComponent } from './presentation/pages/card-produc
   declarations: [
     LayoutPageComponent,
     HomePageComponent,
-    CardProductDetailPageComponent
+    CardProductDetailPageComponent,
+    SearchPageComponent
   ],
   imports: [
     HomeRoutingModule,

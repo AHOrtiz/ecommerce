@@ -1,0 +1,10 @@
+<ng-container *ngTemplateOutlet="searchProduct"></ng-container>
+
+
+<ng-template #searchProduct>
+  <div class="card-product">
+    <h4><strong>Lo que buscabas</strong></h4>
+    <app-product-card *ngFor="let p of products" [product]="p"></app-product-card>
+  </div>
+
+</ng-template>
