@@ -1,30 +1,34 @@
 .register-container {
   display: flex;
+  max-height: 100vh;
   min-height: 100vh;
   font-family: 'Amazon Ember', Arial, sans-serif;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
 /* Lado izquierdo - Formulario */
 .register-form-section {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
   background-color: #ffffff;
-  max-width: 500px;
+  flex-grow: 1;
 }
 
 .amazon-logo {
-  margin-bottom: 2rem;
-  text-align: center;
-  width: 16em;
+  width: 175px;
+  height: 52px;
 }
 
 .logo-img {
-  height: 40px;
-  width: auto;
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
 }
 
 .form-container {
