@@ -1,0 +1,22 @@
+
+.main-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-product{
+  width: 118px;
+  height: 67px;
+}
+.title-price{
+  display: flex;
+  flex-direction: column;
+  gap: 2;
+  font-weight: var(--font-weight-bold);
+}
+.icon{
+  width: 15px;
+  height: 16px;
+  top: 126px;
+  left: 387px;
+}

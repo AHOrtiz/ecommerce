@@ -1,0 +1,13 @@
+<div class="main-card">
+  <div class="img-product">
+      <img [src]="productData.image" alt="">
+  </div>
+   <div class="title-price">
+       <h4>{{ productData.title }}</h4>
+       <p>${{ productData.price | number:'1.2-2' }}</p>
+   </div>
+   <div class="icon">
+       <i class="fa-solid fa-xmark"></i>
+   </div>
+
+</div>

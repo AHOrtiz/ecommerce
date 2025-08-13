@@ -32,6 +32,8 @@ import { FlagComponent } from './components/flag/flag.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { FormsModule } from '@angular/forms';
+import { ShoppingCartProductsComponent } from './components/shopping-cart-products/shopping-cart-products.component';
+import { DetailsShoppingCartProductComponent } from './components/details-shopping-cart-product/details-shopping-cart-product.component';
 
 
 
@@ -57,6 +59,10 @@ import { FormsModule } from '@angular/forms';
     ImagesProductComponent,
     FlagComponent,
     FooterComponent,
+    ProductCardComponent,
+    ShoppingCartProductsComponent,
+    DetailsShoppingCartProductComponent,
+
     // Butons
     PrimaryComponent,
     PrimaryWithIconComponent,
@@ -66,9 +72,6 @@ import { FormsModule } from '@angular/forms';
     ToStringPipe,
     CarruselComponent,
     TruncateTextPipe,
-    ProductCardComponent,
-
-
   ],
   imports: [
  CommonModule,
@@ -99,7 +102,9 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     MenuUserComponent,
     FlagComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ShoppingCartProductsComponent,
+    DetailsShoppingCartProductComponent,
   ]
 })
 export class SharedModule { }

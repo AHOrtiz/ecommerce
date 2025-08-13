@@ -1,0 +1,23 @@
+<div class="main-card">
+   <div class="title">
+      <h3>Productos en carrito</h3>
+   </div>
+   <!--Productos detalles -->
+   <div class="detail-product">
+       <shared-details-shopping-cart-product
+        *ngFor="let product of products"
+        [productData]="product">
+      </shared-details-shopping-cart-product>
+   </div>
+   <div class="price">
+      <h3 class="total">Total</h3>
+      <p class="">$00,00</p>
+   </div>
+   <div class="btn-label">
+          <input type="text" placeholder="label text" class="input">
+          <shared-btn-primary [text]="'Buttom'"></shared-btn-primary>
+   </div>
+   <div>
+       <shared-btn-primary [text]="'Text Buttom'" [type]="'card'" class="btn-card"></shared-btn-primary>
+   </div>
+</div>
