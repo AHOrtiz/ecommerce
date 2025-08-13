@@ -30,4 +30,7 @@ export class LoginPageComponent {
       }
     })
   }
+  public navigatorRegister(){
+    this.router.navigate(['auth/register'])
+  }
 }

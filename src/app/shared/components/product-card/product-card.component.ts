@@ -20,9 +20,9 @@ interface Product {
 export class ProductCardComponent {
     @Input() product!: Product;
 
-  selectedImage!: string;
-  selectedSize!: string;
-  selectedColor!: string;
+  selectedImage: string='';
+  selectedSize:  string='';
+  selectedColor: string='';
 
   ngOnInit() {
     this.selectedImage = this.product.images[0];

@@ -14,7 +14,7 @@ export class LayoutPageComponent {
    */
   constructor(
     private loaderService: LoaderService,
-    public menuUserModal: MenuUserModalService
+    private menuUserModal: MenuUserModalService
   ) { }
 
   // Public property

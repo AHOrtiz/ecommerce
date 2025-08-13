@@ -13,12 +13,11 @@
 }
 
 .navbar-container {
-  display: flex;
-  align-items: center;
-  padding: 8px 16px;
-  max-width: 1500px;
-  margin: 0 auto;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 16px;
+    justify-content: space-between;
 }
 
 /* Logo de Amazon */

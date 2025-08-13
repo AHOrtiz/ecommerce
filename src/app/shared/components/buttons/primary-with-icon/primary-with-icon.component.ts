@@ -12,6 +12,7 @@ export class PrimaryWithIconComponent implements OnInit {
   // Inputs
   @Input() icon: string = '';
   @Input() state: 'normal' | 'disabled' = 'normal';
+  @Input() type: 'normal' | 'form' = 'normal';
 
   // Outputs
   @Output() click = new EventEmitter<void>();
@@ -32,6 +33,16 @@ export class PrimaryWithIconComponent implements OnInit {
     this.containerElement!.nativeElement.style.backgroundColor = `var(--primary-orange-color)`;
   }
 
+  // Private methods
+  private setPaddingFor(type: 'normal' | 'form'): string {
+    switch (type) {
+      case 'normal':
+        return '10px 25px';
+      case 'form':
+        return '10px 64px';
+    }
+  }
+
   // Public methods
   public onClick() {
     if (this.state === 'disabled') return;
@@ -49,5 +60,7 @@ export class PrimaryWithIconComponent implements OnInit {
       this.containerElement!.nativeElement.style.color = 'var(--background-color)';
       this.containerElement!.nativeElement.style.cursor = 'pointer';
     }
+
+      this.containerElement!.nativeElement.style.padding = this.setPaddingFor(this.type);
   }
 }

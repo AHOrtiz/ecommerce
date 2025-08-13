@@ -24,7 +24,7 @@ export class RegisterPageComponent {
     this.loginUseCase.register(this.email, this.password, this.username).subscribe({
       next: (user: User) => {
         this.tokenUseCase.save(user.token)
-        this.router.navigate(['login']);
+        this.router.navigate(['/register']);
       },
       error: (error) => {
         console.error('Register failed', error)
