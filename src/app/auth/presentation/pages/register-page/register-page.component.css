@@ -1,36 +1,191 @@
-:host{
-  width: 100%;
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Amazon Ember', Arial, sans-serif;
 }
 
-.main-login{
+/* Lado izquierdo - Formulario */
+.register-form-section {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  max-width: 500px;
 }
-form{
+
+.amazon-logo {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 16em;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #0f1111;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.register-form {
   display: flex;
   flex-direction: column;
-   padding:10px
+  gap: 1rem;
 }
-input[type=text]{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 
+.form-group-fullname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
-button{
-  border-radius: 7px;
-  height: 40px;
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  width: 120%;
+
+.form-group-full{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
 }
-.btn-google{
-  margin: 2px;
-  background-color: var(--background-color);
-  color: var(--primary-color);
-  height: 40px;
+
+/* Agregar margen derecho solo al primer campo */
+.form-group-full:first-child {
+  margin-right: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%; /* Asegurar que todos los form-group ocupen el ancho completo */
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f1111;
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background-color: #ffffff;
+  width: 100%; /* Asegurar que todos los inputs ocupen todo el ancho disponible */
+  box-sizing: border-box; /* Incluir padding y border en el cálculo del ancho */
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #e77600;
+  box-shadow: 0 0 0 2px rgba(231, 118, 0, 0.2);
+}
+
+.btn-submit {
+  background-color: #ff9900;
+  color: #0f1111;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-submit:hover:not(.disabled) {
+  background-color: #fa8900;
+}
+
+.btn-submit.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #d5d9d9;
+}
+
+.separator-text {
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  color: #565959;
+  background-color: white;
+}
+
+.btn-google {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #0f1111;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.btn-google:hover {
+  background-color: #f7f7f7;
+  border-color: #c7c7c7;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #565959;
+}
+
+.register-anchor {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.register-anchor:hover {
+  text-decoration: underline;
+}
+
+.container-img{
+  width: auto;
+  height: auto;
 }

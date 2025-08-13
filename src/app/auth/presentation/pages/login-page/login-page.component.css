@@ -28,11 +28,6 @@
   width: auto;
 }
 
-/* Si no tienes la imagen, puedes usar este estilo de texto */
-
-
-
-
 .form-container {
   width: 100%;
   max-width: 400px;
@@ -78,16 +73,6 @@
   outline: none;
   border-color: #e77600;
   box-shadow: 0 0 0 2px rgba(231, 118, 0, 0.2);
-}
-
-.form-input.error {
-  border-color: #d13212;
-}
-
-.error-message {
-  font-size: 0.75rem;
-  color: #d13212;
-  margin-top: 0.25rem;
 }
 
 .checkbox-group {

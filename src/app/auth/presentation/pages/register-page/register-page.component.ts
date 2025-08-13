@@ -31,4 +31,7 @@ export class RegisterPageComponent {
       }
     })
   }
+  public backLogin():void{
+     this.router.navigate(['/auth/login'])
+  }
 }

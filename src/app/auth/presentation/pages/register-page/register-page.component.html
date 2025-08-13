@@ -1,4 +1,94 @@
-<div class="main-login">
+
+<div class="register-container">
+  <!-- Lado izquierdo - Formulario -->
+  <div class="register-form-section">
+    <div class="amazon-logo">
+      <!-- <img src="/assets/imgs/logo.png" alt="Amazon" class="logo-img"> -->
+    </div>
+
+    <div class="form-container">
+      <h2 class="form-title">Registrarse</h2>
+
+      <form (ngSubmit)="onRegister()"  class="register-form">
+        <!--Campo Fullname  -->
+        <div class="form-group-fullname">
+             <div class="form-group-full">
+                  <label for="firstName" class="form-label">First Name:</label>
+                  <input id="firstName"  name="firstName" required type="text" class="form-input">
+             </div>
+             <div class="form-group-full">
+                   <label for="lastName" class="form-label">Last Name:</label>
+                  <input id="lastName"  name="lastName" required type="text" class="form-input">
+             </div>
+        </div>
+        <!-- Campo Usuario -->
+        <div class="form-group">
+          <label for="email" class="form-label">Email:</label>
+          <input id="email" [(ngModel)]="email" name="email" required type="email" class="form-input">
+
+        </div>
+
+        <!-- Campo Usuario -->
+         <div class="form-group">
+             <label for="username" class="form-label">Username:</label>
+             <input id="username" [(ngModel)]="username" name="username" required type="text" class="form-input">
+         </div>
+
+        <!-- Campo Contraseña -->
+        <div class="form-group">
+
+           <label for="password" class="form-label">Password:</label>
+           <input id="password" [(ngModel)]="password" name="password" required type="text" class="form-input">
+
+        </div>
+
+        <!-- Botón Registro -->
+        <button
+          type="submit"
+          class="btn-submit">
+           Registrarse
+        </button>
+      </form>
+
+      <!-- Separador OR -->
+      <div class="separator">
+        <span class="separator-text">O</span>
+      </div>
+
+      <!-- Botón Google -->
+      <button type="button" class="btn-google">
+        <img src="assets/google-icon.png" alt="Google" class="google-icon">
+        Ingresar con Google
+      </button>
+
+      <!-- Enlace registro -->
+      <div class="register-link">
+        <span>¿Ya tienes cuenta? </span>
+        <a  (click)="backLogin()"  class="register-anchor">Ir login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lado derecho - Ilustración -->
+  <div class="container-img">
+      <img src="/assets/imgs/login.gif" alt="">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="main-login">
     <h1>Register New User</h1>
     <form (ngSubmit)="onRegister()">
       <label for="email">Email:</label>
@@ -14,4 +104,4 @@
       <button type="submit" class="btn-google" routerLink="/auth/login">Back</button>
     </form>
 
-  </div>
+  </div> -->
