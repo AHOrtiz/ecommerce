@@ -8,10 +8,15 @@
   width: 118px;
   height: 67px;
 }
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
 .title-price{
   display: flex;
   flex-direction: column;
-  gap: 2;
+  flex-grow: 1;
   font-weight: var(--font-weight-bold);
 }
 .icon{
