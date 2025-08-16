@@ -1,33 +1,40 @@
-.main-card{
+:host {
   width: 445px;
-  padding: 42px 45px 44px 44px;
   background-color: var(--white-color);
+  height: auto;
+  display: block;
 }
-.title{
+
+.main-card{
+  padding: 44px 42px 55px 44px;
+}
+label {
   font-size: var(--font-size-subtitle-2);
-  width: 300px;
   font-weight: var(--font-weight-semibold);
-  margin-top:44px;
-  margin-bottom: 45px;
-}
-h3{
-  margin: 0;
+
 }
 .detail-product{
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  margin-top: 45px;
+  gap: 37px;
 }
-.price{
+.detail-price{
+  margin-top: 35px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-
-.total{
+.detail-price .total {
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-subtitle-1);
+  color: var(--text-disabled-color);
+}
+.detail-price .price {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-title-3);
 }
 
 .btn-card{

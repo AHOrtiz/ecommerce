@@ -1,20 +1,14 @@
 <div class="main-card">
-   <div class="title">
-      <h3>Productos en carrito</h3>
-   </div>
-   <!--Productos detalles -->
-   <div class="detail-product">
-       <shared-details-shopping-cart-product
-        *ngFor="let product of products"
-        [productData]="product">
-      </shared-details-shopping-cart-product>
-   </div>
-   <div class="price">
-      <h3 class="total">Total</h3>
-      <p class="">$00,00</p>
-   </div>
+  <label>Productos en carrito</label>
+  <!--Productos detalles -->
+  <div class="detail-product">
+    <shared-details-shopping-cart-product *ngFor="let product of products"
+      [productData]="product"></shared-details-shopping-cart-product>
+  </div>
+  <div class="detail-price">
+    <label class="total">Total</label>
+    <label class="price">$00,00</label>
+  </div>
 
-   <div>
-       <shared-btn-primary [text]="'Ir a carrito'" [type]="'card'" class="btn-card"></shared-btn-primary>
-   </div>
+  <shared-btn-primary [text]="'Ir a carrito'" [type]="'card'" class="btn-card"></shared-btn-primary>
 </div>

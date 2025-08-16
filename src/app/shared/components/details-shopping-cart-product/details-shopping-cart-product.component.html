@@ -2,9 +2,9 @@
   <div class="img-product">
       <img [src]="productData.image" alt="">
   </div>
-   <div class="title-price">
-       <h4>{{ productData.title }}</h4>
-       <p>${{ productData.price | number:'1.2-2' }}</p>
+   <div class="detail">
+       <label class="title">{{ productData.title }}</label>
+       <label class="price">${{ productData.price | number:'1.2-2' }}</label>
    </div>
    <div class="icon">
        <i class="fa-solid fa-xmark"></i>
