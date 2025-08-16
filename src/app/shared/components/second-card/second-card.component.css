@@ -59,10 +59,23 @@
   margin-bottom: 6px;
 }
 
-.card .footer .card-text .price {
-  font-size: var(--font-size-base);
+.card .footer .card-text .container-price {
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
+.card .footer .card-text .price {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+}
+
+.card .footer .card-text .discount {
+  margin-left: 5px;
+  font-size: var(--font-size-caption);
+  color: var(--text-disabled-color);
+  text-decoration:line-through;
+}
 
 .container-isFavorite{
   display: flex;

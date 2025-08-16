@@ -22,20 +22,10 @@ export class SecondCardComponent {
     return false;
   }
 
-  getPrice(): number {
-    if (this.product.discount) {
-      let parsedFloat = parseFloat(this.product.price);
-      let fixedString = parsedFloat.toFixed(2);
-      return this.calcularNuevoPrecio(
-        parseFloat(fixedString),
-        this.product.discount!
-      );
-    }
-    return parseFloat(this.product.price);
-  }
-
-  private calcularNuevoPrecio(precio: number, descuento: number): number {
-    return precio - (precio * descuento) / 100;
+  getPrice(): string {
+    let parsedFloat = parseFloat(this.product.price);
+    let fixedString = parsedFloat.toFixed(2);
+    return fixedString;
   }
 
   btnCarrito() {
