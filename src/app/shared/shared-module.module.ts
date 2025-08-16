@@ -72,6 +72,7 @@ import { DetailsShoppingCartProductComponent } from './components/details-shoppi
     ToStringPipe,
     CarruselComponent,
     TruncateTextPipe,
+    CalculateDiscountPipe
   ],
   imports: [
  CommonModule,

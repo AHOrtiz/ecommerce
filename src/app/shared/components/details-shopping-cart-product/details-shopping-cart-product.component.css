@@ -13,12 +13,22 @@ img{
     height: 100%;
     object-fit: scale-down;
 }
-.title-price{
+.detail{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   font-weight: var(--font-weight-bold);
 }
+
+.detail .title{
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-paragraph);
+}
+.detail .price{
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-paragraph);
+}
+
 .icon{
   width: 15px;
   height: 16px;
