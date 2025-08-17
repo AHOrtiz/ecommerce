@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuUserModalService } from '../../utils/services/modal-navbar.servide';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shared-menu-user',
@@ -8,7 +9,8 @@ import { MenuUserModalService } from '../../utils/services/modal-navbar.servide'
 })
 export class MenuUserComponent {
 
-  constructor(public menuUserModal: MenuUserModalService) { }
+  constructor(public menuUserModal: MenuUserModalService,
+              private router: Router) { }
 
   // Private properties
   private closeTimeout: any;
@@ -20,4 +22,7 @@ export class MenuUserComponent {
       this.menuUserModal.close();
     }, 150);
   }
+   public redirectToHistory():void{
+      this.router.navigate(['inicio/purchase-history'])
+   }
 }

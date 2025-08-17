@@ -1,0 +1,18 @@
+<div class="main-card" (click)="onClick()">
+    <div class="img-product">
+       <img [src]="productData.image" alt="">
+    </div>
+    <div class="info-product">
+        <p class="style-date">{{productData.fecha}}</p>
+        <h4>{{productData.title}}</h4>
+        <p class="style-store">{{productData.store}}</p>
+        <shared-app-raiting></shared-app-raiting>
+    </div>
+    <div class="number-order">
+        <p>Orden número:</p>
+        <p>{{productData.orderNumber}}</p>
+    </div>
+    <div class="link-detail">
+          <a href="">Ver detalle</a>
+    </div>
+</div>

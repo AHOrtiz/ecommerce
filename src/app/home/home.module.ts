@@ -8,6 +8,9 @@ import { LayoutPageComponent } from './presentation/layout-page/layout-page.comp
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 import { HomePageComponent } from './presentation/pages/home-page/home-page.component';
+import { CardProductDetailPageComponent } from './presentation/pages/card-product-detail-page/card-product-detail-page.component';
+import { SearchPageComponent } from './presentation/pages/search-page/search-page.component';
+import { HistorialComprasComponent } from './presentation/pages/historial-compras/historial-compras.component';
 
 import { CategoryUseCase } from './core/use-cases/category.use-case';
 import { CategoryRepository } from './core/repositories/category.repository';
@@ -32,8 +35,9 @@ import { ProductsUseCaseImpl } from './data/use-cases/products.use-case.impl';
 import { ProductsRepository } from './core/repositories/products.repository';
 import { ProductsRepositoryImpl } from './data/repositories/products.repository.impl';
 import { CommonModule } from '@angular/common';
-import { CardProductDetailPageComponent } from './presentation/pages/card-product-detail-page/card-product-detail-page.component';
-import { SearchPageComponent } from './presentation/pages/search-page/search-page.component';
+
+
+
 
 
 
@@ -43,7 +47,8 @@ import { SearchPageComponent } from './presentation/pages/search-page/search-pag
     LayoutPageComponent,
     HomePageComponent,
     CardProductDetailPageComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    HistorialComprasComponent
   ],
   imports: [
     HomeRoutingModule,

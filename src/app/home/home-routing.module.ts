@@ -4,6 +4,7 @@ import { LayoutPageComponent } from './presentation/layout-page/layout-page.comp
 import { HomePageComponent } from './presentation/pages/home-page/home-page.component';
 import { CardProductDetailPageComponent } from './presentation/pages/card-product-detail-page/card-product-detail-page.component';
 import { SearchPageComponent } from './presentation/pages/search-page/search-page.component';
+import { HistorialComprasComponent } from './presentation/pages/historial-compras/historial-compras.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
       {path: '', component: HomePageComponent },
       {path:'detail-product', component:CardProductDetailPageComponent},
       {path:'search-product',component:SearchPageComponent},
+      {path:'purchase-history',component:HistorialComprasComponent},
       { path: '**', redirectTo: '' },
     ]
   }

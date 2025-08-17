@@ -1,0 +1,15 @@
+<ng-container  *ngTemplateOutlet="history"></ng-container>
+
+<ng-template #history>
+    <div class="main-container-history">
+        <div class="head-container-history">
+               <i class="fa-solid fa-arrow-left" (click)="OnclickBack()"></i>
+               <h3 class="title">Tu historial de compras</h3>
+        </div>
+        <div class="body-container-history">
+             <shared-details-product-history *ngFor="let product of products" [productData]="product" (click)="goToDetailProduct()"></shared-details-product-history>
+        </div>
+
+    </div>
+</ng-template>
+

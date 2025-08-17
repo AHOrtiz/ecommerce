@@ -34,6 +34,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { FormsModule } from '@angular/forms';
 import { ShoppingCartProductsComponent } from './components/shopping-cart-products/shopping-cart-products.component';
 import { DetailsShoppingCartProductComponent } from './components/details-shopping-cart-product/details-shopping-cart-product.component';
+import { DetailsProductHistoryComponent } from './components/details-product-history/details-product-history.component';
 
 
 
@@ -62,6 +63,7 @@ import { DetailsShoppingCartProductComponent } from './components/details-shoppi
     ProductCardComponent,
     ShoppingCartProductsComponent,
     DetailsShoppingCartProductComponent,
+    DetailsProductHistoryComponent,
 
     // Butons
     PrimaryComponent,
@@ -106,6 +108,7 @@ import { DetailsShoppingCartProductComponent } from './components/details-shoppi
     ProductCardComponent,
     ShoppingCartProductsComponent,
     DetailsShoppingCartProductComponent,
+    DetailsProductHistoryComponent,
   ]
 })
 export class SharedModule { }
