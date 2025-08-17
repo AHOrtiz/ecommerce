@@ -1,0 +1,13 @@
+<ng-container *ngTemplateOutlet="helPage"></ng-container>
+
+<ng-template #helPage>
+  <div class="">
+      <div class="head-container-help">
+         <i class="fa-solid fa-arrow-left" (click)="OnclickBack()"></i>
+         <h3 class="title">Preguntas frecuentes</h3>
+      </div>
+      <div class="container-body-help">
+            <shared-ask-and-answer *ngFor="let ask of ask_answer" [ask]="ask.ask" [answer]="ask.answer"></shared-ask-and-answer>
+      </div>
+  </div>
+</ng-template>

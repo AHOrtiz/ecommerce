@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shared-footer',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+
+   constructor(private router: Router){}
+
+  navigateToHelp(){
+    this.router.navigate(['inicio/help']);
+  }
 
 }

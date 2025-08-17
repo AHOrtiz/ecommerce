@@ -1,0 +1,20 @@
+.head-container-help{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.title{
+  font-weight: var(--font-weight-bold);
+  margin-left: 40px;
+}
+i{
+  cursor: pointer;
+}
+i:hover{
+  color: var(--primary-orange-secondary-color);
+}
+
+container-body-help{
+  padding: 20px;
+}

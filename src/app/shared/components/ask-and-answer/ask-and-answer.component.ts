@@ -7,7 +7,7 @@ import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class AskAndAnswerComponent {
 
-  @Input() ask: string = '¿Precios tachados y Ahorros?';
+  @Input() ask:any;
   @Input() answer: string = 'Los productos en Amazon pueden mostrar el precio listado, el precio recomendado, el precio anterior u otro precio tachado o información de ahorro en la página de detalles del producto.';
   @ViewChild('container',{static:true}) containerElement?: ElementRef<HTMLDivElement>;
   @ViewChild('text',{static:true}) textElements?: ElementRef<HTMLLabelElement>;
@@ -33,7 +33,7 @@ export class AskAndAnswerComponent {
       this.containerElement!.nativeElement.style.backgroundColor = 'var(--background-secondary-color)';
       this.textElements!.nativeElement.style.color = 'var(--text-color)';
       // ANSWER
-      this.containerAnswer!.nativeElement.style.color = 'var(--text-color)';
+      this.containerAnswer!.nativeElement.style.color = 'var(--text-color-light)';
       this.containerAnswer!.nativeElement.style.display = 'none';
       // ICON
       this.icon!.nativeElement.classList.remove('rotate');

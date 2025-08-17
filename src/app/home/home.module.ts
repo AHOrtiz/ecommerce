@@ -35,6 +35,7 @@ import { ProductsUseCaseImpl } from './data/use-cases/products.use-case.impl';
 import { ProductsRepository } from './core/repositories/products.repository';
 import { ProductsRepositoryImpl } from './data/repositories/products.repository.impl';
 import { CommonModule } from '@angular/common';
+import { HelpPageComponent } from './presentation/pages/help-page/help-page.component';
 
 
 
@@ -48,7 +49,8 @@ import { CommonModule } from '@angular/common';
     HomePageComponent,
     CardProductDetailPageComponent,
     SearchPageComponent,
-    HistorialComprasComponent
+    HistorialComprasComponent,
+    HelpPageComponent
   ],
   imports: [
     HomeRoutingModule,
