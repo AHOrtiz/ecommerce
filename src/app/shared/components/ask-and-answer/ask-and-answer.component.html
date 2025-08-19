@@ -1,12 +1,12 @@
 <div #container class="container noselect">
   <div class="header-container">
-    <p #text>{{ask}}</p>
+    <label #text class="title-question">{{ask}}</label>
     <div class="icon-container" (click)="toggle()">
       <i #icon class="fa-solid fa-plus"></i>
     </div>
   </div>
 
   <div #answerContainer class="container-response">
-    <p>{{answer}}</p>
+    <label>{{answer}}</label>
   </div>
 </div>
