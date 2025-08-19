@@ -7,36 +7,41 @@ import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class AskAndAnswerComponent {
 
-  @Input() ask:any;
-  @Input() answer: string = 'Los productos en Amazon pueden mostrar el precio listado, el precio recomendado, el precio anterior u otro precio tachado o información de ahorro en la página de detalles del producto.';
+  // Inputs
+  @Input() ask: string = 'Test';
+  @Input() answer: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
   @ViewChild('container',{static:true}) containerElement?: ElementRef<HTMLDivElement>;
   @ViewChild('text',{static:true}) textElements?: ElementRef<HTMLLabelElement>;
   @ViewChild('answerContainer',{static:true}) containerAnswer?: ElementRef<HTMLDivElement>;
   @ViewChild('icon',{static:true}) icon?: ElementRef<HTMLLabelElement>;
 
+  // Public properties
   public isOpen: Boolean = false
 
+  // Public methods
   public toggle() {
     this.isOpen = !this.isOpen
 
     if (this.isOpen) {
       this.containerElement!.nativeElement.style.height = '150px';
-      this.containerElement!.nativeElement.style.backgroundColor = 'var(--text-color-button)';
-      this.textElements!.nativeElement.style.color = 'var(--text-color-ligth)';
+      this.containerElement!.nativeElement.style.backgroundColor = 'var(--primary-imperial-color)';
+      this.textElements!.nativeElement.style.color = 'var(--background-color)';
       // ANSWER
-      this.containerAnswer!.nativeElement.style.color = 'var(--text-color-ligth)';
+      this.containerAnswer!.nativeElement.style.color = 'var(--background-color)';
       this.containerAnswer!.nativeElement.style.display = 'block';
       // ICON
       this.icon!.nativeElement.classList.add('rotate');
+      this.icon!.nativeElement.style.color = 'var(--white-color)';
     } else {
-      this.containerElement!.nativeElement.style.height = '60px';
-      this.containerElement!.nativeElement.style.backgroundColor = 'var(--background-secondary-color)';
+      this.containerElement!.nativeElement.style.height = '76px';
+      this.containerElement!.nativeElement.style.backgroundColor = 'var(--white-color)';
       this.textElements!.nativeElement.style.color = 'var(--text-color)';
       // ANSWER
-      this.containerAnswer!.nativeElement.style.color = 'var(--text-color-light)';
+      this.containerAnswer!.nativeElement.style.color = 'var(--text-color)';
       this.containerAnswer!.nativeElement.style.display = 'none';
       // ICON
       this.icon!.nativeElement.classList.remove('rotate');
+      this.icon!.nativeElement.style.color = 'var(--text-color)';
     }
   }
 }

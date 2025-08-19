@@ -18,16 +18,15 @@ img{
     height: 100%;
     object-fit: scale-down;
 }
-
-.info-product .number-order{
+.info-product{
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
-.info-product{
-  flex-grow: 1;
-}
 .number-order{
   flex-grow: .03;
+  display: flex;
+  flex-direction: column;
 }
 .link-detail{
   flex-grow: .02;
@@ -38,6 +37,10 @@ img{
 .style-store{
  font-weight: var(--font-weight-regular);
 }
+.text-title {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-subtitle-1);
+}
 h4{
   font-weight: var(--font-weight-bold);
 }
@@ -47,5 +50,5 @@ a{
 ::ng-deep shared-app-raiting{
     display: flex;
     flex-direction: column;
-    width: 8%;
+    align-self: start;
 }
