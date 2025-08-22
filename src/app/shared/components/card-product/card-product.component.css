@@ -63,7 +63,7 @@ img{
   flex-direction: column;
   color: var(--text-color-ligth);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-text);
   font-weight: var(--font-weight-medium);
 }
 

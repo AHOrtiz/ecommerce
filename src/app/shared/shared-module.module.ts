@@ -1,6 +1,6 @@
 import { ToStringPipe } from './utils/pipes/toString.pipe';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { BtnCircleComponent } from './components/btn-circle/btn-circle.component';
 import { BtnDescuentosComponent } from './components/btn-descuentos/btn-descuentos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -35,8 +35,6 @@ import { FormsModule } from '@angular/forms';
 import { ShoppingCartProductsComponent } from './components/shopping-cart-products/shopping-cart-products.component';
 import { DetailsShoppingCartProductComponent } from './components/details-shopping-cart-product/details-shopping-cart-product.component';
 import { DetailsProductHistoryComponent } from './components/details-product-history/details-product-history.component';
-
-
 
 @NgModule({
   declarations: [
@@ -76,12 +74,14 @@ import { DetailsProductHistoryComponent } from './components/details-product-his
     TruncateTextPipe,
     CalculateDiscountPipe
   ],
-  imports: [
- CommonModule,
- FormsModule
-
+  providers: [
+    CurrencyPipe
   ],
-  exports:[
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
+  exports: [
     BtnDescuentosComponent,
     BtnCircleComponent,
     NavbarComponent,

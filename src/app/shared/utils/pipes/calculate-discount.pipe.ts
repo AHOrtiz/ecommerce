@@ -1,9 +1,12 @@
+import { CurrencyPipe } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'calculateDiscount'
 })
 export class CalculateDiscountPipe implements PipeTransform {
+
+  constructor(private currencyPipe: CurrencyPipe) {}
 
   // Se obtiene el precio como valor y el descuento como argumento
   transform(value: string, ...args: number[]): unknown {
@@ -12,9 +15,9 @@ export class CalculateDiscountPipe implements PipeTransform {
 
     if (discount > 0) {
       let newPrice = this.calcularNuevoPrecio(price, discount);
-      return newPrice.toFixed(2);
+      return this.currencyPipe.transform(newPrice, '', 'symbol', '1.2-2') ?? '';
     }
-    return price.toFixed(2);
+    return this.currencyPipe.transform(price, '', 'symbol', '1.2-2') ?? '';
   }
 
   private calcularNuevoPrecio(precio: number, descuento: number): number {
