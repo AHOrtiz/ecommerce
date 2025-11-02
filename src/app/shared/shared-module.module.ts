@@ -109,6 +109,9 @@ import { DetailsProductHistoryComponent } from './components/details-product-his
     ShoppingCartProductsComponent,
     DetailsShoppingCartProductComponent,
     DetailsProductHistoryComponent,
+  ],
+  providers:[
+    CurrencyPipe
   ]
 })
 export class SharedModule { }

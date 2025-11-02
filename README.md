@@ -9,8 +9,14 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
 
 ## Back-End repository
   Run
-``https://github.com/AHOrtiz/Amazon---Nest``
+ - Download  project Back``https://github.com/AHOrtiz/Amazon---Nest`` 
+ - Run ``npm run start:dev`` 
+ - Base de datos en Postgresql 14 con pgAdmin version 9.4
+ - En Postman correr el siguiente endpoint para que automaticamente se cree los datos`http://localhost:3000/api/v1/seed` en la Base de Datos.
 
+## Front-end
+  - npm i 
+  - ng serve
 ## DataBase
 
 - `http://localhost:3000/users`   
