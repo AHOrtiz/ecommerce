@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Products } from 'src/app/home/core/models/products.model';
@@ -8,24 +9,35 @@ import { Products } from 'src/app/home/core/models/products.model';
   styleUrls: ['./second-card.component.css'],
 })
 export class SecondCardComponent {
-  @Input() product!: Products;
-  constructor(private router: Router) {}
 
+  constructor(
+    private router: Router,
+    private currencyPipe: CurrencyPipe
+  ) {}
+
+  // Inputs
+  @Input() product!: Products;
+
+  // Getters
   get rating(): number {
     return Number(this.product.rating);
   }
 
-  hasDiscount(): boolean {
+  get discount(): string {
+    return '-' + this.product.discount.toString() + '%';
+  }
+
+  // Methods Public
+  public hasDiscount(): boolean {
     if (this.product.discount) {
       return true;
     }
     return false;
   }
 
-  getPrice(): string {
+  public getPrice(): string {
     let parsedFloat = parseFloat(this.product.price);
-    let fixedString = parsedFloat.toFixed(2);
-    return fixedString;
+    return this.currencyPipe.transform(parsedFloat, '', 'symbol', '1.2-2') ?? '';
   }
 
   btnCarrito() {

@@ -12,9 +12,10 @@
         <shared-app-raiting [stars]="rating"></shared-app-raiting>
       </div>
       <div class="container-price">
-        <label *ngIf="product.discount > 0" class="price">${{product.price|
+        <label *ngIf="product.discount > 0" class="price">{{product.price|
           calculateDiscount:product.discount}}</label>
-        <label class="discount">${{getPrice()}}</label>
+        <label class="discount">{{getPrice()}}</label>
+        <label *ngIf="hasDiscount" class="discount-red">{{discount}}</label>
       </div>
     </div>
     <div class="container-isFavorite"> <i class="fa fa-heart fas"></i></div>

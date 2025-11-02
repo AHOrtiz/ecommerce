@@ -29,7 +29,7 @@
 
 .text .title {
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-text);
   margin-bottom: 2px;
 }
 

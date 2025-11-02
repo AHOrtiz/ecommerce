@@ -41,7 +41,7 @@
 
 }
 .body-container label {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-text);
   border: 1px solid black ;
   display: flex;
   border-radius: 1em;

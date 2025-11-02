@@ -15,5 +15,5 @@ div {
 div span {
   padding-left: 5px;
   color: var(--text-color);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-text);
 }
