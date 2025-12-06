@@ -1,0 +1,42 @@
+<div class="reviews-container">
+
+  <!-- Sección de título y rating promedio -->
+  <div class="reviews-header">
+    <h2>Opiniones de clientes</h2>
+
+    <div class="average-rating">
+      <shared-app-raiting></shared-app-raiting>
+    </div>
+
+    <p class="total-ratings">{{ totalRatings | number }} calificaciones globales</p>
+  </div>
+
+  <!-- Desglose de estrellas -->
+  <div class="rating-breakdown">
+    <div *ngFor="let item of ratingBreakdown" class="rating-row">
+      <span class="stars-label">{{ item.stars }} {{ item.stars === 1 ? 'estrella' : 'estrellas' }}</span>
+
+      <div class="progress-bar-container">
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="item.percentage"></div>
+        </div>
+      </div>
+
+      <span class="percentage">{{ item.percentage }}%</span>
+    </div>
+  </div>
+
+  <!-- Separador -->
+  <div class="divider"></div>
+
+  <!-- Sección de escribir opinión -->
+  <div class="write-review-section">
+    <h3>Escribe tu opinión de este producto</h3>
+    <p class="subtitle">Comparte tu opinión con otros usuarios</p>
+
+    <button class="btn-write-review" (click)="onWriteReview()">
+      Escribir mi opinión
+    </button>
+  </div>
+
+</div>

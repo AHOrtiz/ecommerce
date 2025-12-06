@@ -1,0 +1,33 @@
+<div class="review-container">
+
+  <!-- Header: Rating y título -->
+  <div class="review-header">
+    <div class="rating">
+        <shared-app-raiting [stars]="4"></shared-app-raiting>
+    </div>
+    <h3 class="review-title">{{ title }}</h3>
+  </div>
+
+  <!-- Contenido de la reseña -->
+  <p class="review-content">{{ message }}</p>
+
+  <!-- Footer: Likes/Dislikes -->
+  <div class="review-footer">
+    <div class="actions">
+      <button
+        class="action-btn like-btn"
+        title="¿Te pareció útil?">
+        <i [class]="icon1"></i>
+        <span class="count">2</span>
+      </button>
+
+      <button
+        class="action-btn dislike-btn"
+        title="¿No te pareció útil?">
+        <i [class]="icon2"></i>
+        <span class="count">1</span>
+      </button>
+    </div>
+  </div>
+
+</div>

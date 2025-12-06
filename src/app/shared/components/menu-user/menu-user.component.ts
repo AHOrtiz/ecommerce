@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class MenuUserComponent {
 
+  showLogoutModal = false;
+
   constructor(public menuUserModal: MenuUserModalService,
               private router: Router) { }
 
@@ -25,4 +27,11 @@ export class MenuUserComponent {
    public redirectToHistory():void{
       this.router.navigate(['inicio/purchase-history'])
    }
+   public  confirmLogout() {
+    this.showLogoutModal = false;
+    // realizar logout real aquí (authService.logout(), router.navigate, etc.)
+  }
+   onLogoutClick() {
+    this.showLogoutModal = true;
+  }
 }

@@ -35,6 +35,10 @@ import { FormsModule } from '@angular/forms';
 import { ShoppingCartProductsComponent } from './components/shopping-cart-products/shopping-cart-products.component';
 import { DetailsShoppingCartProductComponent } from './components/details-shopping-cart-product/details-shopping-cart-product.component';
 import { DetailsProductHistoryComponent } from './components/details-product-history/details-product-history.component';
+import { ModalAskAnswComponent } from './components/modal-ask-answ/modal-ask-answ.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ReviewsUserComponent } from './components/reviews-user/reviews-user.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +66,10 @@ import { DetailsProductHistoryComponent } from './components/details-product-his
     ShoppingCartProductsComponent,
     DetailsShoppingCartProductComponent,
     DetailsProductHistoryComponent,
+    ModalAskAnswComponent,
+    ReviewsComponent,
+    ProductDetailsComponent,
+    ReviewsUserComponent,
 
     // Butons
     PrimaryComponent,
@@ -72,7 +80,11 @@ import { DetailsProductHistoryComponent } from './components/details-product-his
     ToStringPipe,
     CarruselComponent,
     TruncateTextPipe,
-    CalculateDiscountPipe
+    CalculateDiscountPipe,
+
+
+
+
   ],
   providers: [
     CurrencyPipe
@@ -109,9 +121,11 @@ import { DetailsProductHistoryComponent } from './components/details-product-his
     ShoppingCartProductsComponent,
     DetailsShoppingCartProductComponent,
     DetailsProductHistoryComponent,
+    ModalAskAnswComponent,
+    ReviewsComponent,
+    ProductDetailsComponent,
+    ReviewsUserComponent,
   ],
-  providers:[
-    CurrencyPipe
-  ]
+
 })
 export class SharedModule { }

@@ -1,0 +1,59 @@
+<div class="spd-container">
+
+  <div class="spd-header">
+    <div class="spd-left">
+      <img [src]="imgSrc" alt="product image" class="product-img">
+    </div>
+
+    <div class="spd-center">
+      <div class="purchase-date">{{ purchaseDate }}</div>
+      <h3 class="product-title">{{ title }}</h3>
+      <div class="brand">{{ brand }}</div>
+      <div class="rating">
+        <shared-app-raiting [stars]="4"></shared-app-raiting>
+      </div>
+    </div>
+
+    <div class="spd-right">
+      <div class="delivery-label">Entrega</div>
+      <div class="delivery-datetime">{{ deliveryDateTime }}</div>
+    </div>
+  </div>
+
+  <div class="spd-timeline">
+    <div class="timeline-line"></div>
+    <div class="timeline-items">
+      <ng-container *ngFor="let s of statusTimeline; let i = index">
+        <div class="timeline-item" [class.completed]="s.completed">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">{{ s.date }}</div>
+            <div class="timeline-title">{{ s.title }}</div>
+            <div class="timeline-sub" *ngIf="s.subtitle">{{ s.subtitle }}</div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="spd-bottom">
+    <div class="address-box">
+      <div class="address-check">✓</div>
+      <div class="address-text">{{ address }}</div>
+    </div>
+
+    <div class="delivery-info">
+      <div class="info-row">
+        <div class="info-label">Horario y fecha de entrega</div>
+        <div class="info-value">{{ deliveryDateTime }}</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Recibió el paquete</div>
+        <div class="info-value">{{ receiverName }}</div>
+      </div>
+    </div>
+  </div>
+
+</div>

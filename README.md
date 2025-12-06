@@ -14,7 +14,7 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
  - Base de datos en Postgresql 14 con pgAdmin version 9.4
  - En Postman correr el siguiente endpoint para que automaticamente se cree los datos`http://localhost:3000/api/v1/seed` en la Base de Datos.
 
-## Front-end
+## Run Front-end
   - npm i 
   - ng serve
 ## DataBase
@@ -46,3 +46,12 @@ app/
 │   ├── app-routing.module.ts # Configuración de rutas principales
 │   └── app.module.ts        # Módulo
 ```
+## Run project in navegator
+  - En el proyecto de Nest ubicar el archivo de src>seed>data>seed-data.ts 
+  - Ubicar los usuarios disponibles
+  - En postman colocar el endpoint `http://localhost:3000/api/v1/auth/login` en el body colocar el correo y de esta manera se crea el token.
+  - Existen algunos endpoints que piden el token. 
+## Users
+  - email: 'allison@hotmail.com',
+  - pass:   Melody123
+   

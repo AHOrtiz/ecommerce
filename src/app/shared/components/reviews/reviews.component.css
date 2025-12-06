@@ -1,0 +1,152 @@
+.reviews-container {
+  width: 100%;
+  padding: 24px;
+  background: var(--text-color-light);
+  border-radius: 8px;
+   margin: 0 auto;
+   max-width: 400px;
+
+}
+
+.reviews-header {
+  margin-bottom: 28px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #111;
+  }
+
+  .average-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .total-ratings {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+  }
+}
+
+.rating-breakdown {
+  margin-bottom: 24px;
+
+  .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+
+    .stars-label {
+      font-size: 13px;
+      color: #111;
+      min-width: 90px;
+      text-align: right;
+    }
+
+    .progress-bar-container {
+      flex: 1;
+      height: 8px;
+      background: #e8e8e8;
+      border-radius: 4px;
+      overflow: hidden;
+      min-width: 120px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 100%;
+      background: #e8e8e8;
+      position: relative;
+
+      .progress-fill {
+        height: 100%;
+        background:var(--primary-orange-color);
+        transition: width 0.3s ease;
+      }
+    }
+
+    .percentage {
+      font-size: 13px;
+      color: #111;
+      min-width: 35px;
+      text-align: right;
+    }
+  }
+}
+
+.divider {
+  height: 1px;
+  background: #e8e8e8;
+  margin: 24px 0;
+}
+
+.write-review-section {
+  text-align: center;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: #111;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: #999;
+    margin: 0 0 20px 0;
+  }
+
+  .btn-write-review {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-orange-color);
+    color:var(--text-color-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--primary-orange-secondary-color);
+    }
+
+    &:active {
+      background:var(--primary-orange-secondary-color);
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reviews-container {
+    padding: 16px;
+  }
+
+  .rating-breakdown .rating-row {
+    .stars-label {
+      min-width: 70px;
+      font-size: 12px;
+    }
+
+    .progress-bar-container {
+      min-width: 80px;
+    }
+
+    .percentage {
+      min-width: 30px;
+      font-size: 12px;
+    }
+  }
+
+  .write-review-section {
+    h3 {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="main-container" (click)="onCancel()">
+  <div class="modal" (click)="$event.stopPropagation()">
+
+    <div class="body-container">
+      <p class="question">
+        {{ text}}
+      </p>
+
+      <div class="buttons">
+        <button class="btn-accept" (click)="onConfirm()">Aceptar</button>
+        <button class="btn-cancel" (click)="onCancel()" >Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
