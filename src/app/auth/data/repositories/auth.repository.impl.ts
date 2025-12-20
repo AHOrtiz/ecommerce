@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 
@@ -34,8 +34,8 @@ export class AuthRepositoryImpl extends AuthRepository {
 
   /**
    * Metodo encargado de crear un nuevo usuario
-   * @param email 
-   * @param password 
+   * @param email
+   * @param password
    * @returns Usuario creado
    */
   override register(email: string, password: string, username: string): Observable<User> {
@@ -46,5 +46,10 @@ export class AuthRepositoryImpl extends AuthRepository {
         }
       })
     )
+  }
+  logout(): Observable<HttpResponse<{ message: string }>> {
+    const token = localStorage.getItem('token') || '';
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return this.http.post<{ message: string }>(`${this.baseUrl}/logout`, {}, { headers, observe: 'response' });
   }
 }

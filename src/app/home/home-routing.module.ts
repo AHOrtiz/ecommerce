@@ -6,6 +6,7 @@ import { CardProductDetailPageComponent } from './presentation/pages/card-produc
 import { SearchPageComponent } from './presentation/pages/search-page/search-page.component';
 import { HistorialComprasComponent } from './presentation/pages/historial-compras/historial-compras.component';
 import { HelpPageComponent } from './presentation/pages/help-page/help-page.component';
+import { PurchaseDetailsPageComponent } from './presentation/pages/purchase-details-page/purchase-details-page.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
       {path:'detail-product', component:CardProductDetailPageComponent},
       {path:'search-product',component:SearchPageComponent},
       {path:'purchase-history',component:HistorialComprasComponent},
+      {path:'purchase-detail',component:PurchaseDetailsPageComponent},
       {path:'help',component:HelpPageComponent},
       { path: '**', redirectTo: '' },
     ]

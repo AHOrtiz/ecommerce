@@ -36,6 +36,7 @@ import { ProductsRepository } from './core/repositories/products.repository';
 import { ProductsRepositoryImpl } from './data/repositories/products.repository.impl';
 import { CommonModule } from '@angular/common';
 import { HelpPageComponent } from './presentation/pages/help-page/help-page.component';
+import { PurchaseDetailsPageComponent } from './presentation/pages/purchase-details-page/purchase-details-page.component';
 
 
 
@@ -50,7 +51,8 @@ import { HelpPageComponent } from './presentation/pages/help-page/help-page.comp
     CardProductDetailPageComponent,
     SearchPageComponent,
     HistorialComprasComponent,
-    HelpPageComponent
+    HelpPageComponent,
+    PurchaseDetailsPageComponent
   ],
   imports: [
     HomeRoutingModule,

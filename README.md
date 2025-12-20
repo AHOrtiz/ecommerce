@@ -51,7 +51,4 @@ app/
   - Ubicar los usuarios disponibles
   - En postman colocar el endpoint `http://localhost:3000/api/v1/auth/login` en el body colocar el correo y de esta manera se crea el token.
   - Existen algunos endpoints que piden el token. 
-## Users
-  - email: 'allison@hotmail.com',
-  - pass:   Melody123
-   
+

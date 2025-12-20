@@ -3,6 +3,7 @@ import { Observable } from "rxjs";
 import { User } from "src/app/auth/core/models/user.model";
 import { AuthRepository } from "../../core/repositories/auth.repository";
 import { AuthUseCase } from "../../core/use-cases/login.use-case";
+import { HttpResponse } from "@angular/common/http";
 
 
 /** SE EXTIENDE DE LA INTERFAZ */
@@ -19,5 +20,8 @@ export class LoginUseCaseImpl extends AuthUseCase  {
 
   override register(email: string, password: string, username: string): Observable<User> {
     return this.authRepository.register(email, password, username)
+  }
+   override logout(): Observable<HttpResponse<{ message: string }>> {
+    return this.authRepository.logout();
   }
 }

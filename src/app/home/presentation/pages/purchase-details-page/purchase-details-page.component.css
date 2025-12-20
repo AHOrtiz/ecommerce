@@ -1,0 +1,21 @@
+
+.head-container-history{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.title{
+  margin-right: auto;
+  padding: 4px;
+}
+.body-container-history , .other-purchases{
+  display: flex;
+  flex-direction: column;
+
+}
+shared-product-details{
+  display: flex;
+  justify-content: center;
+}
+

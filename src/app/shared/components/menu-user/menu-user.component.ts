@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuUserModalService } from '../../utils/services/modal-navbar.servide';
 import { Router } from '@angular/router';
+import { LoginUseCaseImpl } from 'src/app/auth/data/use-cases/login.use-case.impl';
 
 @Component({
   selector: 'shared-menu-user',
@@ -12,7 +13,8 @@ export class MenuUserComponent {
   showLogoutModal = false;
 
   constructor(public menuUserModal: MenuUserModalService,
-              private router: Router) { }
+              private router: Router,
+              private authUseCase: LoginUseCaseImpl) { }
 
   // Private properties
   private closeTimeout: any;
@@ -28,8 +30,19 @@ export class MenuUserComponent {
       this.router.navigate(['inicio/purchase-history'])
    }
    public  confirmLogout() {
-    this.showLogoutModal = false;
-    // realizar logout real aquí (authService.logout(), router.navigate, etc.)
+   
+    this.authUseCase.logout().subscribe({
+      next: res => {
+        if (res.status === 200) {
+          localStorage.removeItem('token');
+          this.router.navigate(['/login']);
+        }
+      },
+      error: () => {
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+      }
+    });
   }
    onLogoutClick() {
     this.showLogoutModal = true;

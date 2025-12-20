@@ -1,0 +1,25 @@
+<ng-container *ngTemplateOutlet="purchase"></ng-container>
+
+<ng-template #purchase>
+  <div class="main-container">
+
+    <div class="head-container-history">
+      <i class="fa-solid fa-arrow-left" (click)="OnclickBack()"></i>
+      <h3 class="title">Detalle de envio</h3>
+      <div class="number-order">
+        <p><strong>Orden número:</strong></p>
+        <p>00000000000012359877</p>
+      </div>
+    </div>
+    <div class="body-container-history">
+      <shared-product-details [address]="'119 oriente 1829 Heroes Periferico'" [deliveryDateTime]="'4/08/21'"
+        [receiverName]="'Allison Herrera'" [title]="'Nintendo Switch'" [brand]="'aaa'"
+        [statusTimeline]="statusTimeline"></shared-product-details>
+      <label for=""><strong>Otras Compras</strong></label>
+      <div class="other-purchases">
+       <shared-details-product-history *ngFor="let producto of products" [productData]="producto"></shared-details-product-history>
+      </div>
+    </div>
+  </div>
+
+</ng-template>
