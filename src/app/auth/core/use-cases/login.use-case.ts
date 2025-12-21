@@ -7,5 +7,5 @@ import { Observable } from "rxjs";
 export abstract class AuthUseCase {
   abstract login(email: string, password: string): Observable<User>
   abstract register(email: string, password: string, username: string): Observable<User>
-  abstract logout(): Observable<HttpResponse<{ message: string }>>;
+
 }

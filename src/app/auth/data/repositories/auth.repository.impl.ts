@@ -47,9 +47,5 @@ export class AuthRepositoryImpl extends AuthRepository {
       })
     )
   }
-  logout(): Observable<HttpResponse<{ message: string }>> {
-    const token = localStorage.getItem('token') || '';
-    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
-    return this.http.post<{ message: string }>(`${this.baseUrl}/logout`, {}, { headers, observe: 'response' });
-  }
+  
 }

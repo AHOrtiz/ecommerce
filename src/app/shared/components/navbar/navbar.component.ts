@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuUserModalService } from '../../utils/services/modal-navbar.servide';
 import { take } from 'rxjs';
+import { MenuCartService } from '../../utils/services/modal-cart.services';
 
 @Component({
   selector: 'shared-navbar',
@@ -9,7 +10,10 @@ import { take } from 'rxjs';
 })
 export class NavbarComponent {
 
-  constructor(public menuUserModal: MenuUserModalService) { }
+  constructor(
+    public menuUserModal: MenuUserModalService ,
+    public menuCartModal: MenuCartService
+  ) { }
 
   // Private properties
   private closeTimeout: any;
@@ -27,6 +31,22 @@ export class NavbarComponent {
           .subscribe((isVisible: boolean) => {
             if (isVisible) {} else {
               this.menuUserModal.close();
+            }
+          });
+      }, 300);
+    }
+  }
+  public onCartHover(isHovering: boolean) {
+    if (isHovering) {
+      clearTimeout(this.closeTimeout);
+    }else {
+      // 0.3s de espera despues de que el mouse salga del icono
+      this.closeTimeout = setTimeout(() => {
+        this.menuCartModal.visibleMenuCart$
+          .pipe(take(1))
+          .subscribe((isVisible: boolean) => {
+            if (isVisible) {} else {
+              this.menuCartModal.close();
             }
           });
       }, 300);

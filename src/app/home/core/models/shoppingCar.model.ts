@@ -1,29 +1,30 @@
 export interface ShoppingCar {
-    id:                   number;
-    status:               string;
-    totalPrice:           string;
-    createdAt:            Date;
-    updatedAt:            Date;
-    deliveryDate:         Date;
-    deliveryTracking:     DeliveryTracking[];
-    orderNumber:          string;
-    totalProducts:        number;
-    shoppingCartProducts: ShoppingCartProduct[];
+  id: number;
+  status: string;
+  totalPrice: string;
+  createdAt: Date;
+  updatedAt: Date;
+  deliveryDate?: Date;
+  deliveryTracking?: DeliveryTracking[];
+  orderNumber?: string;
+  totalProducts: number;
+  shoppingCartProducts: ShoppingCartProduct[];
 }
 
 export interface DeliveryTracking {
-    status: string;
-    date:   Date;
+  status: string;
+  date: Date;
 }
 
 export interface ShoppingCartProduct {
-    id:            number;
-    product:       Product;
-    quantity:      number;
-    purchasePrice: string;
+  id: number;
+  product: Product;
+  quantity: number;
+  purchasePrice: string;
 }
 
 export interface Product {
-    name:     string;
-    imageUrl: string;
+  id: string;
+  name: string;
+  imageUrl: string;
 }

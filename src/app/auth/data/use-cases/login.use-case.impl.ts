@@ -21,7 +21,5 @@ export class LoginUseCaseImpl extends AuthUseCase  {
   override register(email: string, password: string, username: string): Observable<User> {
     return this.authRepository.register(email, password, username)
   }
-   override logout(): Observable<HttpResponse<{ message: string }>> {
-    return this.authRepository.logout();
-  }
+  
 }

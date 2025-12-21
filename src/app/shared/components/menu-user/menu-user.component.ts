@@ -13,8 +13,7 @@ export class MenuUserComponent {
   showLogoutModal = false;
 
   constructor(public menuUserModal: MenuUserModalService,
-              private router: Router,
-              private authUseCase: LoginUseCaseImpl) { }
+              private router: Router) { }
 
   // Private properties
   private closeTimeout: any;
@@ -30,19 +29,8 @@ export class MenuUserComponent {
       this.router.navigate(['inicio/purchase-history'])
    }
    public  confirmLogout() {
-   
-    this.authUseCase.logout().subscribe({
-      next: res => {
-        if (res.status === 200) {
-          localStorage.removeItem('token');
-          this.router.navigate(['/login']);
-        }
-      },
-      error: () => {
-        localStorage.removeItem('token');
-        this.router.navigate(['/login']);
-      }
-    });
+
+
   }
    onLogoutClick() {
     this.showLogoutModal = true;

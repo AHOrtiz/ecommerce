@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoaderService } from 'src/app/shared/utils/services/loader.service';
+import { MenuCartService } from 'src/app/shared/utils/services/modal-cart.services';
 import { MenuUserModalService } from 'src/app/shared/utils/services/modal-navbar.servide';
 
 @Component({
@@ -14,7 +15,8 @@ export class LayoutPageComponent {
    */
   constructor(
     private loaderService: LoaderService,
-    private menuUserModal: MenuUserModalService
+    private menuUserModal: MenuUserModalService,
+    private menuCartModal: MenuCartService
   ) { }
 
   // Public property
@@ -27,4 +29,8 @@ export class LayoutPageComponent {
   * Mostrar modal de menu de Usuario.
   */
   public showMenuUser$ = this.menuUserModal.visibleMenuUser$;
+  /**
+   * Mostrar modal de menu del Carrito.
+   */
+  public showMenuCart$ = this.menuCartModal.visibleMenuCart$;
 }
